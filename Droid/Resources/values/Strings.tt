@@ -1,0 +1,44 @@
+﻿<#@ template debug="false" hostspecific="true" language="C#" #>
+<#@ assembly name="System.Xml.Linq"#>
+<#@ import namespace="System.IO" #>
+<#@ import namespace="System.Linq" #>
+<#@ import namespace="System.Text" #>
+<#@ import namespace="System.Xml" #>
+<#@ import namespace="System.Xml.Linq" #>
+<#@ import namespace="System.Collections.Generic" #>
+<#@ import namespace="Microsoft.CSharp" #>
+<#@ output extension=".xml" #>
+<# var inputFilePath = @"../../../Localization/Resources.resx";
+    var provider = new CSharpCodeProvider();
+    SetCurrentDirectory();
+#>
+<?xml version="1.0" encoding="UTF-8"?>
+<resources>
+<#      foreach (var resource in GetResources(inputFilePath)) 
+		{ #>
+        <string name="<#= provider.CreateEscapedIdentifier(resource.Key.Replace(".", "_")) #>">"<#= resource.Value #>"</string>
+<#
+        }
+#>
+</resources>
+
+<#+
+        private void SetCurrentDirectory() 
+        {
+            Directory.SetCurrentDirectory(Host.ResolvePath("./"));
+        }
+    
+        private static List<KeyValuePair<string,string>> GetResources(string filePath) 
+        {
+            XDocument doc = XDocument.Load(filePath);
+            var rootElement = doc.Root;
+            if (rootElement == null)
+            {
+                throw new InvalidOperationException("No root element was found");
+            }
+            var dataElements = rootElement.Descendants("data").ToList();
+            var resources = dataElements.Select(e => new KeyValuePair<string, string>(e.Attribute("name").Value, e.Elements().First().Value)).ToList();
+            return resources;
+       }
+
+#>
