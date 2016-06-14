@@ -1,24 +1,29 @@
 ﻿using System;
-using Microsoft.Practices.ServiceLocation;
 using GalaSoft.MvvmLight.Ioc;
-using TechTalk.ViewModel;
-using TechTalk.ViewModels.Implementation;
-using TechTalk.ViewModels;
-using GalaSoft.MvvmLight.Views;
+using Microsoft.Practices.ServiceLocation;
 using TechTalk.Interfaces;
+using TechTalk.ViewModel;
+using TechTalk.ViewModels;
+using TechTalk.ViewModels.Implementation;
+using System.Collections.Generic;
+
 namespace TechTalk
 {
     public abstract class ViewModelLocatorBase
     {
-        protected abstract INavigationService NavigationService { get; }
+        protected abstract Func<INavigation> NavigationServiceFunc { get; }
 
-        protected abstract IGalleryService GalleryService { get; }
+        protected abstract Func<IGalleryService> GalleryServiceFunc { get; }
+
+        protected abstract Dictionary<Type, Type> NavigationPages { get; }
 
         protected ViewModelLocatorBase()
         {
             ServiceLocator.SetLocatorProvider(() => SimpleIoc.Default);
-            SimpleIoc.Default.Register<INavigationService>(() => NavigationService);
-            SimpleIoc.Default.Register<IGalleryService>(() => GalleryService);
+
+            //REGISTERING SERVICES
+            SimpleIoc.Default.Register<INavigation>(NavigationServiceFunc);
+            SimpleIoc.Default.Register<IGalleryService>(GalleryServiceFunc);
 
             //REGISTERING VIEW MODEL
             SimpleIoc.Default.Register<IMainMenuViewModel, MainMenuViewModel>();

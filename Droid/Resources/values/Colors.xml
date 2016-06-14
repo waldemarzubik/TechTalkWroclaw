@@ -1,0 +1,9 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<resources>
+	<color name="SharpBlue">#39C2D7</color>
+	<color name="LimeGreen">#A3C644</color>
+	<color name="Graphite">#464547</color>
+	<color name="White">#FFFFFF</color>
+	<color name="DarkBlue">#1A9CB0</color>
+	<drawable name="SplashBackground">#FFFFFF</drawable>
+</resources>

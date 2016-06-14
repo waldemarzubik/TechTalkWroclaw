@@ -1,4 +1,5 @@
 ﻿using System;
+using TechTalk.ViewModels;
 
 namespace TechTalk.Interfaces
 {
@@ -11,8 +12,8 @@ namespace TechTalk.Interfaces
 
         void GoBack();
 
-        void NavigateTo(string pageKey);
+        void NavigateTo<T>() where T : IBaseViewModel;
 
-        void NavigateTo<T>(string pageKey, T parameter);
+        void NavigateTo<T, G>(G parameter) where T : IBaseViewModel;
     }
 }

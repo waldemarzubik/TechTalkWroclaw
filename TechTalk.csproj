@@ -45,6 +45,7 @@
     <Compile Include="ViewModels\IGalleryViewModel.cs" />
     <Compile Include="ViewModels\IMainMenuViewModel.cs" />
     <Compile Include="ViewModels\IPictureViewModel.cs" />
+    <Compile Include="Consts\ApplicationConsts.cs" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Interfaces\" />
@@ -52,6 +53,7 @@
     <Folder Include="ViewModels\" />
     <Folder Include="DataModels\" />
     <Folder Include="ViewModels\Implementation\" />
+    <Folder Include="Consts\" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="Microsoft.Practices.ServiceLocation">

@@ -1,29 +1,26 @@
 ﻿using System;
-using GalaSoft.MvvmLight.Views;
+using System.Collections.Generic;
+using TechTalk.Droid.Views;
 using TechTalk.Interfaces;
+using TechTalk.ViewModels.Implementation;
+using TechTalk.Droid.ClientSpecific;
 
 namespace TechTalk.Droid
 {
     public class ViewModelLocator : ViewModelLocatorBase
     {
-        public ViewModelLocator()
-        {
-        }
+        protected override Func<IGalleryService> GalleryServiceFunc => () => new GalleryService();
 
-        protected override IGalleryService GalleryService
+        protected override Dictionary<Type, Type> NavigationPages
         {
             get
             {
-                throw new NotImplementedException();
+                var dictionary = new Dictionary<Type, Type>();
+                dictionary.Add(typeof(MainViewModel), typeof(MainView));
+                return dictionary;
             }
         }
 
-        protected override INavigationService NavigationService
-        {
-            get
-            {
-                throw new NotImplementedException();
-            }
-        }
+        protected override Func<INavigation> NavigationServiceFunc => () => new NavigationService(NavigationPages);
     }
 }

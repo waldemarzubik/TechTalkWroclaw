@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using GalaSoft.MvvmLight.Views;
 using TechTalk.Interfaces;
 
@@ -6,11 +7,7 @@ namespace TechTalk.iOS
 {
     public sealed class ViewModelLocator : ViewModelLocatorBase
     {
-        public ViewModelLocator()
-        {
-        }
-
-        protected override IGalleryService GalleryService
+        protected override Func<IGalleryService> GalleryServiceFunc
         {
             get
             {
@@ -18,7 +15,15 @@ namespace TechTalk.iOS
             }
         }
 
-        protected override INavigationService NavigationService
+        protected override Dictionary<Type, Type> NavigationPages
+        {
+            get
+            {
+                throw new NotImplementedException();
+            }
+        }
+
+        protected override Func<INavigation> NavigationServiceFunc
         {
             get
             {
