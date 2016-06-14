@@ -1,10 +1,10 @@
 ﻿using Android.App;
-using TechTalk.ViewModels.Implementation;
+using TechTalk.ViewModels;
 
 namespace TechTalk.Droid.Views
 {
     [Activity]
-    public class MainView : ActivityBase<MainViewModel>
+    public class MainView : ActivityBase<IMainViewModel>
     {
         public MainView() : base(Resource.Layout.MainView, Resource.Layout.Toolbar)
         {

@@ -5,17 +5,22 @@ using GalaSoft.MvvmLight.Ioc;
 using TechTalk.Interfaces;
 using System.Threading.Tasks;
 using TechTalk.ViewModels;
+using TechTalk.Droid.Interfaces;
+using Microsoft.Practices.ServiceLocation;
 
 namespace TechTalk.Droid.Views
 {
     [Activity(MainLauncher = true, NoHistory = true, Theme = "@style/Theme.Epam.TechTalk.Splash")]
     public class SplashView : AppCompatActivity
     {
-        private INavigation NavigationService => SimpleIoc.Default.GetInstance<INavigation>();
+        private INavigation NavigationService => ServiceLocator.Current.GetInstance<INavigation>();
+
+        private IActivityLifeTimeMonitor ActivityLifeTimeMonitor => ServiceLocator.Current.GetInstance<IActivityLifeTimeMonitor>();
 
         protected override void OnCreate(Bundle savedInstanceState)
         {
             base.OnCreate(savedInstanceState);
+            ActivityLifeTimeMonitor.Activity = this;
             SetContentView(Resource.Layout.SplashView);
         }
 
@@ -32,6 +37,10 @@ namespace TechTalk.Droid.Views
         protected override void OnDestroy()
         {
             base.OnDestroy();
+            if (ActivityLifeTimeMonitor.Activity == this)
+            {
+                ActivityLifeTimeMonitor.Activity = null;
+            }
         }
     }
 }

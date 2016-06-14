@@ -1,11 +1,10 @@
-﻿using System;
-using GalaSoft.MvvmLight.Views;
+﻿using TechTalk.Interfaces;
 
 namespace TechTalk.ViewModels.Implementation
 {
-    public class MainViewModel : BaseViewModel
+    public class MainViewModel : BaseViewModel, IMainViewModel
     {
-        public MainViewModel(INavigationService navigationService) : base(navigationService)
+        public MainViewModel(INavigation navigationService) : base(navigationService)
         {
         }
     }

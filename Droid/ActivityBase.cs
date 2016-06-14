@@ -6,6 +6,8 @@ using GalaSoft.MvvmLight.Ioc;
 using Android.Graphics;
 using Android.App;
 using TechTalk.Droid.Extensions;
+using TechTalk.Droid.Interfaces;
+using Microsoft.Practices.ServiceLocation;
 
 namespace TechTalk.Droid
 {
@@ -13,6 +15,8 @@ namespace TechTalk.Droid
     {
         private readonly int _layoutResId;
         private readonly int _toolbarResId;
+
+        private IActivityLifeTimeMonitor ActivityLifeTimeMonitor { get; set; }
 
         protected T ViewModel { get; private set; }
 
@@ -29,8 +33,10 @@ namespace TechTalk.Droid
                 OnCreateTransitions();
             }
 
-            ViewModel = SimpleIoc.Default.GetInstance<T>();
+            ActivityLifeTimeMonitor = ServiceLocator.Current.GetInstance<IActivityLifeTimeMonitor>();
+            ViewModel = ServiceLocator.Current.GetInstance<T>();
             base.OnCreate(savedInstanceState);
+            ActivityLifeTimeMonitor.Activity = this;
             SetContentView(_layoutResId);
 
             ViewModel.OnInitialize(Intent.GetNavigationParamter()).ConfigureAwait(false);
@@ -43,6 +49,34 @@ namespace TechTalk.Droid
                     SetTaskDescription(taskDesc);
                     bitmap.Recycle();
                 }
+            }
+        }
+
+        protected override void OnStart()
+        {
+            base.OnStart();
+            ActivityLifeTimeMonitor.Activity = this;
+            ViewModel.OnNavigatedTo();
+        }
+
+        protected override void OnStop()
+        {
+            ViewModel.OnNavigatingFrom();
+            base.OnStop();
+        }
+
+        protected override void OnRestart()
+        {
+            base.OnRestart();
+            ActivityLifeTimeMonitor.Activity = this;
+        }
+
+        protected override void OnDestroy()
+        {
+            base.OnDestroy();
+            if (ActivityLifeTimeMonitor.Activity == this)
+            {
+                ActivityLifeTimeMonitor.Activity = null;
             }
         }
 

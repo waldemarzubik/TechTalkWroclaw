@@ -5,11 +5,6 @@ namespace TechTalk.Interfaces
 {
     public interface INavigation
     {
-        string CurrentPageKey
-        {
-            get;
-        }
-
         void GoBack();
 
         void NavigateTo<T>() where T : IBaseViewModel;

@@ -1,16 +1,16 @@
 ﻿using System.Threading.Tasks;
 using GalaSoft.MvvmLight;
-using GalaSoft.MvvmLight.Views;
+using TechTalk.Interfaces;
 
 namespace TechTalk.ViewModels.Implementation
 {
     public abstract class BaseViewModel : ViewModelBase, IBaseViewModel
     {
-        private INavigationService _navigationService;
+        private INavigation _navigationService;
 
-        private INavigationService NavigationService => _navigationService;
+        private INavigation NavigationService => _navigationService;
 
-        public BaseViewModel(INavigationService navigationService)
+        public BaseViewModel(INavigation navigationService)
         {
             _navigationService = navigationService;
         }
