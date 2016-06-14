@@ -34,12 +34,24 @@
     <Compile Include="Interfaces\INavigation.cs" />
     <Compile Include="DataModels\Picture.cs" />
     <Compile Include="Interfaces\IGalleryService.cs" />
+    <Compile Include="ViewModelLocatorBase.cs" />
+    <Compile Include="ViewModels\Implementation\BaseViewModel.cs" />
+    <Compile Include="ViewModels\Implementation\GalleryViewModel.cs" />
+    <Compile Include="ViewModels\Implementation\MainMenuViewModel.cs" />
+    <Compile Include="ViewModels\Implementation\MainViewModel.cs" />
+    <Compile Include="ViewModels\Implementation\PictureViewModel.cs" />
+    <Compile Include="ViewModels\IMainViewModel.cs" />
+    <Compile Include="ViewModels\IBaseViewModel.cs" />
+    <Compile Include="ViewModels\IGalleryViewModel.cs" />
+    <Compile Include="ViewModels\IMainMenuViewModel.cs" />
+    <Compile Include="ViewModels\IPictureViewModel.cs" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Interfaces\" />
     <Folder Include="Models\" />
     <Folder Include="ViewModels\" />
     <Folder Include="DataModels\" />
+    <Folder Include="ViewModels\Implementation\" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="Microsoft.Practices.ServiceLocation">
