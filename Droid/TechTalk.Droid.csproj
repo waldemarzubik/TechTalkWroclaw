@@ -105,6 +105,13 @@
     <Compile Include="Interfaces\ITransitionService.cs" />
     <Compile Include="ClientSpecific\TransitionService.cs" />
     <Compile Include="ClientSpecific\ActivityLifeTimeMonitor.cs" />
+    <Compile Include="Views\PictureView.cs" />
+    <Compile Include="Views\Fragments\GalleryFragment.cs" />
+    <Compile Include="FragmentBase.cs" />
+    <Compile Include="Interfaces\IDrawerHandler.cs" />
+    <Compile Include="Interfaces\INavigationDrawer.cs" />
+    <Compile Include="ClientSpecific\NavigationDrawerService.cs" />
+    <Compile Include="Views\Fragments\MainMenuFragment.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\AboutResources.txt" />
@@ -126,6 +133,10 @@
     <AndroidResource Include="Resources\layout\SplashView.axml" />
     <AndroidResource Include="Resources\drawable\splash.xml" />
     <AndroidResource Include="Resources\drawable\logo.png" />
+    <AndroidResource Include="Resources\layout\PictureView.axml" />
+    <AndroidResource Include="Resources\layout\GalleryView.axml" />
+    <AndroidResource Include="Resources\layout\MainMenuView.axml" />
+    <AndroidResource Include="Resources\layout\MenuHeader.axml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Views\" />
@@ -137,6 +148,7 @@
     <Folder Include="Resources\mipmap-xxxhdpi\" />
     <Folder Include="Resources\drawable\" />
     <Folder Include="Interfaces\" />
+    <Folder Include="Views\Fragments\" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
   <Import Project="..\packages\Xamarin.Android.Support.Vector.Drawable.23.3.0\build\Xamarin.Android.Support.Vector.Drawable.targets" Condition="Exists('..\packages\Xamarin.Android.Support.Vector.Drawable.23.3.0\build\Xamarin.Android.Support.Vector.Drawable.targets')" />

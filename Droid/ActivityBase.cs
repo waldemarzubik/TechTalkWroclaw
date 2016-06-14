@@ -1,13 +1,13 @@
-﻿using System;
+﻿using Android.App;
+using Android.Graphics;
 using Android.OS;
 using Android.Support.V7.App;
-using TechTalk.ViewModels;
-using GalaSoft.MvvmLight.Ioc;
-using Android.Graphics;
-using Android.App;
+using Android.Support.V7.Widget;
+using Microsoft.Practices.ServiceLocation;
 using TechTalk.Droid.Extensions;
 using TechTalk.Droid.Interfaces;
-using Microsoft.Practices.ServiceLocation;
+using TechTalk.ViewModels;
+using TechTalk.Interfaces;
 
 namespace TechTalk.Droid
 {
@@ -52,6 +52,12 @@ namespace TechTalk.Droid
             }
         }
 
+        public override void SetContentView(int layoutResID)
+        {
+            base.SetContentView(layoutResID);
+            OnCreateToolbar();
+        }
+
         protected override void OnStart()
         {
             base.OnStart();
@@ -77,6 +83,20 @@ namespace TechTalk.Droid
             if (ActivityLifeTimeMonitor.Activity == this)
             {
                 ActivityLifeTimeMonitor.Activity = null;
+            }
+        }
+
+        protected virtual void OnCreateToolbar()
+        {
+            using (var toolbar = FindViewById<Toolbar>(_toolbarResId))
+            {
+                if (toolbar == null)
+                {
+                    return;
+                }
+                SetSupportActionBar(toolbar);
+                SupportActionBar.SetDisplayHomeAsUpEnabled(true);
+                SupportActionBar.SetHomeButtonEnabled(true);
             }
         }
 

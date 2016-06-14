@@ -7,6 +7,8 @@ using TechTalk.Droid.Interfaces;
 using TechTalk.Droid.Views;
 using TechTalk.Interfaces;
 using TechTalk.ViewModels;
+using TechTalk.ViewModel;
+using TechTalk.Droid.Views.Fragments;
 
 namespace TechTalk.Droid
 {
@@ -20,6 +22,9 @@ namespace TechTalk.Droid
             {
                 var dictionary = new Dictionary<Type, Type>();
                 dictionary.Add(typeof(IMainViewModel), typeof(MainView));
+                dictionary.Add(typeof(IMainMenuViewModel), typeof(MainMenuFragment));
+                dictionary.Add(typeof(IGalleryViewModel), typeof(GalleryFragment));
+                dictionary.Add(typeof(IPictureViewModel), typeof(PictureView));
                 return dictionary;
             }
         }
@@ -29,7 +34,8 @@ namespace TechTalk.Droid
             get
             {
                 var dictonary = new Dictionary<Type, Tuple<Type, int>>();
-                dictonary.Add(typeof(IGalleryViewModel), new Tuple<Type, int>(typeof(IMainViewModel), 0));
+                dictonary.Add(typeof(IGalleryViewModel), new Tuple<Type, int>(typeof(IMainViewModel), Resource.Id.drawerContent));
+                dictonary.Add(typeof(IMainMenuViewModel), new Tuple<Type, int>(typeof(IMainViewModel), Resource.Id.navigationDrawer));
                 return dictonary;
             }
         }
@@ -43,6 +49,7 @@ namespace TechTalk.Droid
         {
             SimpleIoc.Default.Register<IActivityLifeTimeMonitor, ActivityLifeTimeMonitor>();
             SimpleIoc.Default.Register<ITransitionService, TransitionService>();
+            SimpleIoc.Default.Register<INavigationDrawer, NavigationDrawerService>();
         }
     }
 }

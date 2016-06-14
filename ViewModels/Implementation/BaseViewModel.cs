@@ -1,4 +1,5 @@
-﻿using System.Threading.Tasks;
+﻿using System.Runtime.CompilerServices;
+using System.Threading.Tasks;
 using GalaSoft.MvvmLight;
 using TechTalk.Interfaces;
 
@@ -8,7 +9,7 @@ namespace TechTalk.ViewModels.Implementation
     {
         private INavigation _navigationService;
 
-        private INavigation NavigationService => _navigationService;
+        public INavigation NavigationService => _navigationService;
 
         public BaseViewModel(INavigation navigationService)
         {
@@ -25,6 +26,18 @@ namespace TechTalk.ViewModels.Implementation
 
         public virtual void OnNavigatingFrom()
         {
+        }
+
+        protected virtual bool SetProperty<T>(ref T storage, T value, [CallerMemberName] string propertyName = null)
+        {
+            if (Equals(storage, value))
+            {
+                return false;
+            }
+
+            storage = value;
+            RaisePropertyChanged(propertyName);
+            return true;
         }
     }
 }
