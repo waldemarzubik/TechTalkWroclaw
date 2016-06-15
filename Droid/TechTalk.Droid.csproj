@@ -83,6 +83,15 @@
     <Reference Include="FFImageLoading.Transformations">
       <HintPath>..\packages\Xamarin.FFImageLoading.Transformations.2.1.5\lib\MonoAndroid10\FFImageLoading.Transformations.dll</HintPath>
     </Reference>
+    <Reference Include="Square.OkIO">
+      <HintPath>..\packages\Square.OkIO.1.5.0.0\lib\MonoAndroid\Square.OkIO.dll</HintPath>
+    </Reference>
+    <Reference Include="Square.OkHttp">
+      <HintPath>..\packages\Square.OkHttp.2.4.0.0\lib\MonoAndroid\Square.OkHttp.dll</HintPath>
+    </Reference>
+    <Reference Include="Square.Picasso">
+      <HintPath>..\packages\Square.Picasso.2.5.2.1\lib\MonoAndroid\Square.Picasso.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\TechTalk.csproj">
@@ -140,6 +149,7 @@
     <AndroidResource Include="Resources\layout\GalleryView.axml" />
     <AndroidResource Include="Resources\layout\MainMenuView.axml" />
     <AndroidResource Include="Resources\layout\MenuHeader.axml" />
+    <AndroidResource Include="Resources\layout\Item_Picture.axml" />
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>

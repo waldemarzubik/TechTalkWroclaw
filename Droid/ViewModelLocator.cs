@@ -14,7 +14,7 @@ namespace TechTalk.Droid
 {
     public class ViewModelLocator : ViewModelLocatorBase
     {
-        protected override Func<IGalleryService> GalleryServiceFunc => () => new GalleryService();
+        protected override Func<IGalleryService> GalleryServiceFunc => () => new GalleryService(ServiceLocator.Current.GetInstance<IActivityLifeTimeMonitor>());
 
         protected override Dictionary<Type, Type> NavigationPages
         {

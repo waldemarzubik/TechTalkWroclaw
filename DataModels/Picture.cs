@@ -4,8 +4,10 @@ namespace TechTalk.DataModels
 {
     public class Picture
     {
-        public Picture()
-        {
-        }
+        public string Name { get; set; }
+
+        public string Uri { get; set; }
+
+        public string ThumbnailUri { get; set; }
     }
 }

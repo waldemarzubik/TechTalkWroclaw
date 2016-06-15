@@ -7,5 +7,7 @@ namespace TechTalk.ViewModel
     public interface IMainMenuViewModel : IBaseViewModel
     {
         List<string> Menu { get; set; }
+
+        string SelectedItem { get; set; }
     }
 }
