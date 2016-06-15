@@ -5,5 +5,6 @@ namespace TechTalk.ViewModels
 {
     public interface IPictureViewModel : IBaseViewModel
     {
+        string ImageUri { get; set; }
     }
 }

@@ -30,10 +30,25 @@ namespace TechTalk.ViewModels.Implementation
             _galleryService = galleryService;
         }
 
-        public override async void OnNavigatedTo()
+        public override async Task OnInitialize(object parameter)
         {
-            base.OnNavigatedTo();
+            PropertyChanged += GalleryViewModel_PropertyChanged;
             Images = await _galleryService.LoadImagesAsync();
+            await base.OnInitialize(parameter);
+        }
+
+        public override void OnNavigatedTo()
+        {
+            SelectedItem = null;
+            base.OnNavigatedTo();
+        }
+
+        private void GalleryViewModel_PropertyChanged(object sender, System.ComponentModel.PropertyChangedEventArgs e)
+        {
+            if (nameof(SelectedItem).Equals(e.PropertyName) && SelectedItem != null)
+            {
+                NavigationService.NavigateTo<IPictureViewModel, string>(SelectedItem.ThumbnailUri);
+            }
         }
     }
 }

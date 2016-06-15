@@ -19,6 +19,8 @@ namespace TechTalk.Droid.Views.Fragments
         private ObservableRecyclerAdapter<Picture, CachingViewHolder> _adapter;
         private RecyclerView _imagesList;
         private Binding<Picture, Picture> _selectedItemBinding;
+        private int _itemSize;
+
 
         public RecyclerView ImagesList
         {
@@ -32,13 +34,18 @@ namespace TechTalk.Droid.Views.Fragments
         public override void OnCreate(Bundle savedInstanceState)
         {
             ViewModel.PropertyChanged += ViewModel_PropertyChanged;
+            _itemSize = Activity.WindowManager.DefaultDisplay.Width / COLUMNS_COUNT;
             base.OnCreate(savedInstanceState);
         }
 
         public override void OnDestroy()
         {
             ViewModel.PropertyChanged -= ViewModel_PropertyChanged;
-            _selectedItemBinding.Detach();
+            if (_selectedItemBinding != null)
+            {
+                _selectedItemBinding.Detach();
+                _selectedItemBinding = null;
+            }
             if (_adapter != null)
             {
                 _adapter.Dispose();
@@ -51,10 +58,15 @@ namespace TechTalk.Droid.Views.Fragments
         {
             if (nameof(ViewModel.Images).Equals(e.PropertyName) && ViewModel.Images != null)
             {
-                _adapter = ViewModel.Images.GetRecyclerAdapter(BindViewHolder, CreateViewHolder, null);
+                _adapter = ViewModel.Images.GetRecyclerAdapter(BindViewHolder, Resource.Layout.Item_Picture, ItemClick);
                 _selectedItemBinding = this.SetBinding(() => _adapter.SelectedItem, () => ViewModel.SelectedItem, BindingMode.TwoWay);
                 ImagesList.SetAdapter(_adapter);
             }
+        }
+
+        private void ItemClick(int arg1, View oldView, int arg3, View newView)
+        {
+            TransitionService.SetTransitionInfo(new Tuple<View, string>(newView.FindViewById<ImageView>(Resource.Id.image), Resources.GetString(Resource.String.Picture)));
         }
 
         public override void OnViewCreated(View view, Bundle savedInstanceState)
@@ -64,17 +76,10 @@ namespace TechTalk.Droid.Views.Fragments
             ImagesList.SetLayoutManager(new GridLayoutManager(Activity, COLUMNS_COUNT));
         }
 
-        private CachingViewHolder CreateViewHolder(ViewGroup parent, int viewType)
-        {
-            var view = Activity.LayoutInflater.Inflate(Resource.Layout.Item_Picture, parent, false);
-            int itemSize = Activity.WindowManager.DefaultDisplay.Width / COLUMNS_COUNT;
-            view.LayoutParameters = new ViewGroup.LayoutParams(itemSize, itemSize);
-            return new CachingViewHolder(view);
-        }
-
         private void BindViewHolder(CachingViewHolder viewHolder, Picture item, int position)
         {
             var image = viewHolder.FindCachedViewById<ImageView>(Resource.Id.image);
+            image.LayoutParameters = new ViewGroup.LayoutParams(_itemSize, _itemSize);
             Picasso.With(Activity).Load(new File(item.ThumbnailUri)).Into(image);
         }
     }

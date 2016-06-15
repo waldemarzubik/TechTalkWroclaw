@@ -2101,6 +2101,9 @@ namespace TechTalk.Droid
 			// aapt resource value: 0x7f0a0046
 			public const int parentPanel = 2131361862;
 			
+			// aapt resource value: 0x7f0a0085
+			public const int picture = 2131361925;
+			
 			// aapt resource value: 0x7f0a0012
 			public const int pin = 2131361810;
 			
@@ -2521,6 +2524,9 @@ namespace TechTalk.Droid
 			
 			// aapt resource value: 0x7f0b0019
 			public const int Gallery = 2131427353;
+			
+			// aapt resource value: 0x7f0b001d
+			public const int Picture = 2131427357;
 			
 			// aapt resource value: 0x7f0b001c
 			public const int RushB = 2131427356;

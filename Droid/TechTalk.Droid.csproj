@@ -121,6 +121,7 @@
     <Compile Include="Interfaces\INavigationDrawer.cs" />
     <Compile Include="ClientSpecific\NavigationDrawerService.cs" />
     <Compile Include="Views\Fragments\MainMenuFragment.cs" />
+    <Compile Include="DolanPlzInclude.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\AboutResources.txt" />
@@ -155,6 +156,7 @@
     <AndroidResource Include="Resources\drawable\ic_gallery.xml" />
     <AndroidResource Include="Resources\drawable\ic_noob.xml" />
     <AndroidResource Include="Resources\drawable\ic_rush.xml" />
+    <AndroidResource Include="Resources\values\TransitionNames.xml" />
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>
