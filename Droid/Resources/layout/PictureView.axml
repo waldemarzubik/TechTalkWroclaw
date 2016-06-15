@@ -12,14 +12,14 @@
         android:background="@color/SharpBlue"
         app:contentInsetStart="0dp"
         android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar" />
-    <ImageView
+    <techtalk.droid.controls.CacheImageView
         android:id="@+id/picture"
         android:layout_below="@id/toolbar"
         android:transitionName="@string/Picture"
         android:layout_width="match_parent"
         android:layout_height="match_parent" />
     <com.github.clans.fab.FloatingActionMenu
-        android:id="@+id/menu_green"
+        android:id="@+id/menu"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
@@ -36,18 +36,21 @@
         app:menu_labels_maxLines="2"
         app:menu_labels_ellipsize="end">
         <com.github.clans.fab.FloatingActionButton
+            android:id="@+id/blurButton"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:src="@drawable/ic_blur"
             app:fab_label="Blur"
             style="@style/GreenFabButton" />
         <com.github.clans.fab.FloatingActionButton
+            android:id="@+id/grayscaleButton"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:src="@drawable/ic_grayscale"
             app:fab_label="Greyscale"
             style="@style/GreenFabButton" />
         <com.github.clans.fab.FloatingActionButton
+            android:id="@+id/rotateButton"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:src="@drawable/ic_rotate"

@@ -2140,6 +2140,9 @@ namespace TechTalk.Droid
 			// aapt resource value: 0x7f0a0034
 			public const int beginning = 2131361844;
 			
+			// aapt resource value: 0x7f0a008a
+			public const int blurButton = 2131361930;
+			
 			// aapt resource value: 0x7f0a0014
 			public const int bottom = 2131361812;
 			
@@ -2254,6 +2257,9 @@ namespace TechTalk.Droid
 			// aapt resource value: 0x7f0a0024
 			public const int @fixed = 2131361828;
 			
+			// aapt resource value: 0x7f0a008b
+			public const int grayscaleButton = 2131361931;
+			
 			// aapt resource value: 0x7f0a0006
 			public const int home = 2131361798;
 			
@@ -2300,7 +2306,7 @@ namespace TechTalk.Droid
 			public const int media_actions = 2131361918;
 			
 			// aapt resource value: 0x7f0a0089
-			public const int menu_green = 2131361929;
+			public const int menu = 2131361929;
 			
 			// aapt resource value: 0x7f0a0035
 			public const int middle = 2131361845;
@@ -2352,6 +2358,9 @@ namespace TechTalk.Droid
 			
 			// aapt resource value: 0x7f0a001b
 			public const int right = 2131361819;
+			
+			// aapt resource value: 0x7f0a008c
+			public const int rotateButton = 2131361932;
 			
 			// aapt resource value: 0x7f0a0030
 			public const int screen = 2131361840;
