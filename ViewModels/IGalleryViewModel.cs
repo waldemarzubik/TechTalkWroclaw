@@ -6,7 +6,7 @@ namespace TechTalk.ViewModels
 {
     public interface IGalleryViewModel : IBaseViewModel
     {
-        List<Picture> Images { get; set; }
+        IList<Picture> Images { get; set; }
 
         Picture SelectedItem { get; set; }
     }

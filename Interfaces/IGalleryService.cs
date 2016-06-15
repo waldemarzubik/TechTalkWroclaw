@@ -7,6 +7,6 @@ namespace TechTalk.Interfaces
 {
     public interface IGalleryService
     {
-        Task<List<Picture>> LoadImagesAsync();
+        Task<IList<Picture>> LoadImagesAsync();
     }
 }

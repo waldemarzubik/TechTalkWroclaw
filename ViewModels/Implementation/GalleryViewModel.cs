@@ -8,12 +8,12 @@ namespace TechTalk.ViewModels.Implementation
     public class GalleryViewModel : BaseViewModel, IGalleryViewModel
     {
         private readonly IGalleryService _galleryService;
-        private List<Picture> _images;
+        private IList<Picture> _images;
         private Picture _selectedItem;
 
         private IGalleryService GalleryService => _galleryService;
 
-        public List<Picture> Images
+        public IList<Picture> Images
         {
             get { return _images; }
             set { SetProperty(ref _images, value); }
@@ -47,7 +47,7 @@ namespace TechTalk.ViewModels.Implementation
         {
             if (nameof(SelectedItem).Equals(e.PropertyName) && SelectedItem != null)
             {
-                NavigationService.NavigateTo<IPictureViewModel, string>(SelectedItem.ThumbnailUri);
+				NavigationService.NavigateTo<IPictureViewModel, Picture>(SelectedItem);
             }
         }
     }
