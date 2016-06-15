@@ -150,6 +150,11 @@
     <AndroidResource Include="Resources\layout\MainMenuView.axml" />
     <AndroidResource Include="Resources\layout\MenuHeader.axml" />
     <AndroidResource Include="Resources\layout\Item_Picture.axml" />
+    <AndroidResource Include="Resources\drawable\ic_about.xml" />
+    <AndroidResource Include="Resources\drawable\ic_cool.xml" />
+    <AndroidResource Include="Resources\drawable\ic_gallery.xml" />
+    <AndroidResource Include="Resources\drawable\ic_noob.xml" />
+    <AndroidResource Include="Resources\drawable\ic_rush.xml" />
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>

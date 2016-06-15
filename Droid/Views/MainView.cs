@@ -32,7 +32,7 @@ namespace TechTalk.Droid.Views
         {
             base.OnCreateToolbar();
             SupportActionBar.SetDisplayShowTitleEnabled(false);
-            SupportActionBar.Title = string.Empty;
+            SupportActionBar.Title = TechTalk.Localization.Resources.AppName;
             var toolbar = FindViewById<Toolbar>(Resource.Id.toolbar);
             _drawerToggle = new ActionBarDrawerToggle(this, DrawerLayout, toolbar, 0, 0);
             _drawerToggle.DrawerIndicatorEnabled = true;

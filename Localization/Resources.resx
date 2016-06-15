@@ -123,4 +123,16 @@
 	<data name="About" xml:space="preserve">
     <value>About</value>
   </data>
+	<data name="Gallery" xml:space="preserve">
+    <value>Gallery</value>
+  </data>
+	<data name="CoolOption" xml:space="preserve">
+    <value>Cool option</value>
+  </data>
+	<data name="ForNoobs" xml:space="preserve">
+    <value>For noobs</value>
+  </data>
+	<data name="RushB" xml:space="preserve">
+    <value>Rush B</value>
+  </data>
 </root>

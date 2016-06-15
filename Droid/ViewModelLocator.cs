@@ -43,6 +43,7 @@ namespace TechTalk.Droid
         protected override Func<INavigation> NavigationServiceFunc => () =>
             new NavigationService(ServiceLocator.Current.GetInstance<IActivityLifeTimeMonitor>(),
                                   ServiceLocator.Current.GetInstance<ITransitionService>(),
+                                  ServiceLocator.Current.GetInstance<INavigationDrawer>(),
                                   NavigationPages, CustomMappings);
 
         public ViewModelLocator()

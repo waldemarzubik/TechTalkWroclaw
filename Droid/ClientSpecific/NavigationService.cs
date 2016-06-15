@@ -17,11 +17,17 @@ namespace TechTalk.Droid.ClientSpecific
         private readonly IActivityLifeTimeMonitor _activityLifeTimeMonitor;
         private readonly Dictionary<Type, Tuple<Type, int>> _customMappings;
         private readonly ITransitionService _transitionService;
+        private readonly INavigationDrawer _navigationDrawer;
 
-        public NavigationService(IActivityLifeTimeMonitor activityLifeTimeMonitor, ITransitionService transitionService, Dictionary<Type, Type> pages, Dictionary<Type, Tuple<Type, int>> customMappings)
+        public NavigationService(IActivityLifeTimeMonitor activityLifeTimeMonitor,
+                                 ITransitionService transitionService,
+                                 INavigationDrawer navigationDrawer,
+                                 Dictionary<Type, Type> pages,
+                                 Dictionary<Type, Tuple<Type, int>> customMappings)
         {
             _activityLifeTimeMonitor = activityLifeTimeMonitor;
             _transitionService = transitionService;
+            _navigationDrawer = navigationDrawer;
             _pages = pages;
             _customMappings = customMappings;
         }
@@ -66,6 +72,7 @@ namespace TechTalk.Droid.ClientSpecific
                     if (mapping.Item1 == CurrentPage)
                     {
                         ShowFragment(type, mapping.Item2, parameter);
+                        _navigationDrawer.Close();
                     }
                     return;
                 }

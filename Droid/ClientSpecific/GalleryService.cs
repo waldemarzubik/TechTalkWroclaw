@@ -23,15 +23,17 @@ namespace TechTalk.Droid.ClientSpecific
             Task.Run(() =>
             {
                 var pictures = new List<Picture>();
-                var projection = new[] { MediaStore.MediaColumns.Id };
+                var columns = new[] { MediaStore.MediaColumns.Data, MediaStore.MediaColumns.Id };
                 using (var cursor = _activityLifetimeMonitor.Activity.ContentResolver.Query(MediaStore.Images.Media.ExternalContentUri,
-                                                                 projection, null, null, MediaStore.MediaColumns.Id))
+                                                                 columns, null, null, MediaStore.MediaColumns.Id))
                 {
-                    var idColumnIndex = cursor.GetColumnIndex(projection[0]);
+                    var dataColumnIndex = cursor.GetColumnIndex(columns[0]);
+                    var idColumnIndex = cursor.GetColumnIndex(columns[1]);
                     while (cursor.MoveToNext())
                     {
                         var picture = new Picture();
                         var imageId = cursor.GetLong(idColumnIndex);
+                        picture.Uri = cursor.GetString(dataColumnIndex);
 
                         using (var thumbCursor = _activityLifetimeMonitor.Activity.ContentResolver.Query(MediaStore.Images.Thumbnails.ExternalContentUri, new string[] { MediaStore.Images.Thumbnails.Data },
                                                                                                          string.Format("{0}={1}", MediaStore.Images.Thumbnails.ImageId, imageId), null, null, null))

@@ -14,7 +14,7 @@
 #>
 <?xml version="1.0" encoding="UTF-8"?>
 <resources>
-<#      foreach (var resource in GetResources(inputFilePath)) 
+<#      foreach (var resource in GetResources(inputFilePath))
 		{ #>
         <string name="<#= provider.CreateEscapedIdentifier(resource.Key.Replace(".", "_")) #>">"<#= resource.Value #>"</string>
 <#

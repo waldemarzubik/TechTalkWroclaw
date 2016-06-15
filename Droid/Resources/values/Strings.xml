@@ -2,5 +2,9 @@
 <resources>
         <string name="AppName">"TechTalk#2"</string>
         <string name="About">"About"</string>
+        <string name="Gallery">"Gallery"</string>
+        <string name="CoolOption">"Cool option"</string>
+        <string name="ForNoobs">"For noobs"</string>
+        <string name="RushB">"Rush B"</string>
 </resources>
 

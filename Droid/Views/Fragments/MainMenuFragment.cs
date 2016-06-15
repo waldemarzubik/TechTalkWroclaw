@@ -23,7 +23,26 @@ namespace TechTalk.Droid.Views.Fragments
             {
                 var item = ViewModel.Menu[i];
                 menu.Add(0, i, i, new Java.Lang.String(item.Substring(0, 1).ToUpper() + item.Substring(1)));
-                //menu.GetItem(i).SetIcon(item.Value.ToIcon());
+                menu.GetItem(i).SetIcon(GetIcon(item));
+            }
+        }
+
+        private int GetIcon(string value)
+        {
+            switch (value.ToLower())
+            {
+                case "gallery":
+                    return Resource.Drawable.ic_gallery;
+                case "cool option":
+                    return Resource.Drawable.ic_cool;
+                case "for noobs":
+                    return Resource.Drawable.ic_noob;
+                case "rush b":
+                    return Resource.Drawable.ic_rush;
+                case "about":
+                    return Resource.Drawable.ic_about;
+                default:
+                    throw new ArgumentException("Invalid option");
             }
         }
     }

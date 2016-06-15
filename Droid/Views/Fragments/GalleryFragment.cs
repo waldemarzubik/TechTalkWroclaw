@@ -14,7 +14,7 @@ namespace TechTalk.Droid.Views.Fragments
 {
     public class GalleryFragment : FragmentBase<IGalleryViewModel>
     {
-        private const int COLUMNS_COUNT = 4;
+        private const int COLUMNS_COUNT = 3;
 
         private ObservableRecyclerAdapter<Picture, CachingViewHolder> _adapter;
         private RecyclerView _imagesList;
@@ -49,8 +49,7 @@ namespace TechTalk.Droid.Views.Fragments
 
         private void ViewModel_PropertyChanged(object sender, PropertyChangedEventArgs e)
         {
-            const string ITEMS_PROPERTY = "Images";
-            if (ITEMS_PROPERTY.Equals(e.PropertyName) && ViewModel.Images != null)
+            if (nameof(ViewModel.Images).Equals(e.PropertyName) && ViewModel.Images != null)
             {
                 _adapter = ViewModel.Images.GetRecyclerAdapter(BindViewHolder, CreateViewHolder, null);
                 _selectedItemBinding = this.SetBinding(() => _adapter.SelectedItem, () => ViewModel.SelectedItem, BindingMode.TwoWay);

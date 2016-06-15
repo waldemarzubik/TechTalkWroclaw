@@ -1590,8 +1590,8 @@ namespace TechTalk.Droid
 		public partial class Drawable
 		{
 			
-			// aapt resource value: 0x7f020050
-			public const int SplashBackground = 2130837584;
+			// aapt resource value: 0x7f020055
+			public const int SplashBackground = 2130837589;
 			
 			// aapt resource value: 0x7f020000
 			public const int abc_ab_share_pack_mtrl_alpha = 2130837504;
@@ -1825,13 +1825,28 @@ namespace TechTalk.Droid
 			public const int design_snackbar_background = 2130837580;
 			
 			// aapt resource value: 0x7f02004d
-			public const int logo = 2130837581;
-			
-			// aapt resource value: 0x7f02004f
-			public const int notification_template_icon_bg = 2130837583;
+			public const int ic_about = 2130837581;
 			
 			// aapt resource value: 0x7f02004e
-			public const int splash = 2130837582;
+			public const int ic_cool = 2130837582;
+			
+			// aapt resource value: 0x7f02004f
+			public const int ic_gallery = 2130837583;
+			
+			// aapt resource value: 0x7f020050
+			public const int ic_noob = 2130837584;
+			
+			// aapt resource value: 0x7f020051
+			public const int ic_rush = 2130837585;
+			
+			// aapt resource value: 0x7f020052
+			public const int logo = 2130837586;
+			
+			// aapt resource value: 0x7f020054
+			public const int notification_template_icon_bg = 2130837588;
+			
+			// aapt resource value: 0x7f020053
+			public const int splash = 2130837587;
 			
 			static Drawable()
 			{
@@ -2497,6 +2512,18 @@ namespace TechTalk.Droid
 			
 			// aapt resource value: 0x7f0b0017
 			public const int AppName = 2131427351;
+			
+			// aapt resource value: 0x7f0b001a
+			public const int CoolOption = 2131427354;
+			
+			// aapt resource value: 0x7f0b001b
+			public const int ForNoobs = 2131427355;
+			
+			// aapt resource value: 0x7f0b0019
+			public const int Gallery = 2131427353;
+			
+			// aapt resource value: 0x7f0b001c
+			public const int RushB = 2131427356;
 			
 			// aapt resource value: 0x7f0b0003
 			public const int abc_action_bar_home_description = 2131427331;

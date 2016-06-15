@@ -78,5 +78,41 @@ namespace TechTalk.Localization {
                 return ResourceManager.GetString("AppName", resourceCulture);
             }
         }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Cool option.
+        /// </summary>
+        public static string CoolOption {
+            get {
+                return ResourceManager.GetString("CoolOption", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to For noobs.
+        /// </summary>
+        public static string ForNoobs {
+            get {
+                return ResourceManager.GetString("ForNoobs", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Gallery.
+        /// </summary>
+        public static string Gallery {
+            get {
+                return ResourceManager.GetString("Gallery", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Rush B.
+        /// </summary>
+        public static string RushB {
+            get {
+                return ResourceManager.GetString("RushB", resourceCulture);
+            }
+        }
     }
 }
