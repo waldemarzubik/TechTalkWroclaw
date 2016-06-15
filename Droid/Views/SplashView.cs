@@ -29,7 +29,7 @@ namespace TechTalk.Droid.Views
             base.OnStart();
             Task.Run(async () =>
             {
-                await Task.Delay(3000);
+                await Task.Delay(1500);
                 NavigationService.NavigateTo<IMainViewModel>();
             });
         }
