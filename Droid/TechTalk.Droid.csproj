@@ -122,6 +122,8 @@
     <Compile Include="ClientSpecific\NavigationDrawerService.cs" />
     <Compile Include="Views\Fragments\MainMenuFragment.cs" />
     <Compile Include="DolanPlzInclude.cs" />
+    <Compile Include="Interfaces\IParamsHolder.cs" />
+    <Compile Include="ClientSpecific\ParamsHolder.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\AboutResources.txt" />

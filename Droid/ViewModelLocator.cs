@@ -44,6 +44,7 @@ namespace TechTalk.Droid
             new NavigationService(ServiceLocator.Current.GetInstance<IActivityLifeTimeMonitor>(),
                                   ServiceLocator.Current.GetInstance<ITransitionService>(),
                                   ServiceLocator.Current.GetInstance<INavigationDrawer>(),
+                                  ServiceLocator.Current.GetInstance<IParamsHolder>(),
                                   NavigationPages, CustomMappings);
 
         public ViewModelLocator()
@@ -51,6 +52,7 @@ namespace TechTalk.Droid
             SimpleIoc.Default.Register<IActivityLifeTimeMonitor, ActivityLifeTimeMonitor>();
             SimpleIoc.Default.Register<ITransitionService, TransitionService>();
             SimpleIoc.Default.Register<INavigationDrawer, NavigationDrawerService>();
+            SimpleIoc.Default.Register<IParamsHolder, ParamsHolder>();
         }
     }
 }

@@ -36,10 +36,10 @@ namespace TechTalk.Droid.Views
 
         private void ViewModel_PropertyChanged(object sender, System.ComponentModel.PropertyChangedEventArgs e)
         {
-            if (nameof(ViewModel.ImageUri).Equals(e.PropertyName) && !string.IsNullOrEmpty(ViewModel.ImageUri))
+            if (nameof(ViewModel.Picture).Equals(e.PropertyName) && ViewModel.Picture != null)
             {
                 //Image.SetImageURI(Android.Net.Uri.Parse(ViewModel.ImageUri));
-                Picasso.With(this).Load(new File(ViewModel.ImageUri)).Into(Image);
+                Picasso.With(this).Load(new File(ViewModel.Picture.ThumbnailUri)).Into(Image);
             }
         }
     }

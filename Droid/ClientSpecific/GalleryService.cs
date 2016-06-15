@@ -17,9 +17,9 @@ namespace TechTalk.Droid.ClientSpecific
             _activityLifetimeMonitor = activityLifetimeMonitor;
         }
 
-        public Task<List<Picture>> LoadImagesAsync()
+        public Task<IList<Picture>> LoadImagesAsync()
         {
-            var taskCompletionSource = new TaskCompletionSource<List<Picture>>();
+            var taskCompletionSource = new TaskCompletionSource<IList<Picture>>();
             Task.Run(() =>
             {
                 var pictures = new List<Picture>();
