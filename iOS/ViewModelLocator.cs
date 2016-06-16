@@ -18,12 +18,8 @@ namespace TechTalk.iOS
             }
         }
 
-        protected override Func<INavigation> NavigationServiceFunc
-        {
-            get
-            {
-                throw new NotImplementedException();
-            }
-        }
+		protected override Func<INavigation> NavigationServiceFunc => () => new NavigationService();
+
+        
     }
 }

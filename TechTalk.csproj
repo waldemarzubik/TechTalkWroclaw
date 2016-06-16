@@ -49,6 +49,7 @@
     <Compile Include="Localization\Resources.Designer.cs">
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <Compile Include="Base\NavigationBase.cs" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Interfaces\" />
@@ -58,6 +59,7 @@
     <Folder Include="ViewModels\Implementation\" />
     <Folder Include="Consts\" />
     <Folder Include="Localization\" />
+    <Folder Include="Base\" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="Microsoft.Practices.ServiceLocation">

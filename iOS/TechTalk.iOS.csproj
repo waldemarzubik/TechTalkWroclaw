@@ -191,15 +191,15 @@
     <Compile Include="SlideOutMenuViewController.designer.cs">
       <DependentUpon>SlideOutMenuViewController.cs</DependentUpon>
     </Compile>
-    <Compile Include="PictureCollectionViewController.cs" />
-    <Compile Include="PictureCollectionViewController.designer.cs">
-      <DependentUpon>PictureCollectionViewController.cs</DependentUpon>
-    </Compile>
     <Compile Include="MainMenuViewController.cs" />
     <Compile Include="MainMenuViewController.designer.cs">
       <DependentUpon>MainMenuViewController.cs</DependentUpon>
     </Compile>
     <Compile Include="BaseViewController.cs" />
+    <Compile Include="PictureCollectionViewController.cs" />
+    <Compile Include="PictureCollectionViewController.designer.cs">
+      <DependentUpon>PictureCollectionViewController.cs</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <ITunesArtwork Include="iTunesArtwork" />
