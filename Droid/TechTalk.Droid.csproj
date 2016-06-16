@@ -98,6 +98,10 @@
       <Project>{C537B1AA-0087-4432-8138-4C08D3AFBD4A}</Project>
       <Name>TechTalk</Name>
     </ProjectReference>
+    <ProjectReference Include="..\TechTalk.Droid.Libraries\TechTalk.Droid.Libraries.csproj">
+      <Project>{BA8E471B-3D96-429F-A9BD-D28B05A10588}</Project>
+      <Name>TechTalk.Droid.Libraries</Name>
+    </ProjectReference>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Resources\Resource.designer.cs" />
@@ -122,6 +126,9 @@
     <Compile Include="ClientSpecific\NavigationDrawerService.cs" />
     <Compile Include="Views\Fragments\MainMenuFragment.cs" />
     <Compile Include="DolanPlzInclude.cs" />
+    <Compile Include="Interfaces\IParamsHolder.cs" />
+    <Compile Include="ClientSpecific\ParamsHolder.cs" />
+    <Compile Include="Controls\CacheImageView.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\AboutResources.txt" />
@@ -157,6 +164,12 @@
     <AndroidResource Include="Resources\drawable\ic_noob.xml" />
     <AndroidResource Include="Resources\drawable\ic_rush.xml" />
     <AndroidResource Include="Resources\values\TransitionNames.xml" />
+    <AndroidResource Include="Resources\values\Styles.xml" />
+    <AndroidResource Include="Resources\drawable\ic_close.xml" />
+    <AndroidResource Include="Resources\drawable\ic_edit.xml" />
+    <AndroidResource Include="Resources\drawable\ic_grayscale.xml" />
+    <AndroidResource Include="Resources\drawable\ic_blur.xml" />
+    <AndroidResource Include="Resources\drawable\ic_rotate.xml" />
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>
@@ -168,6 +181,9 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Strings.tt</DependentUpon>
     </AndroidResource>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Controls\" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
   <Import Project="..\packages\Xamarin.Android.Support.Vector.Drawable.23.3.0\build\Xamarin.Android.Support.Vector.Drawable.targets" Condition="Exists('..\packages\Xamarin.Android.Support.Vector.Drawable.23.3.0\build\Xamarin.Android.Support.Vector.Drawable.targets')" />

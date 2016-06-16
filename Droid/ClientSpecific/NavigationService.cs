@@ -21,16 +21,29 @@ namespace TechTalk.Droid.ClientSpecific
         private readonly Dictionary<Type, Tuple<Type, int>> _customMappings;
         private readonly ITransitionService _transitionService;
         private readonly INavigationDrawer _navigationDrawer;
+        private readonly IParamsHolder _paramsHolder;
+        private readonly Dictionary<string, object> _parametersByKey = new Dictionary<string, object>();
 
         public NavigationService(IActivityLifeTimeMonitor activityLifeTimeMonitor,
                                  ITransitionService transitionService,
                                  INavigationDrawer navigationDrawer,
+<<<<<<< HEAD
 		                         Dictionary<Type, Tuple<Type, int>> customMappings)
+=======
+                                 IParamsHolder paramsHolder,
+                                 Dictionary<Type, Type> pages,
+                                 Dictionary<Type, Tuple<Type, int>> customMappings)
+>>>>>>> origin/master
         {
             _activityLifeTimeMonitor = activityLifeTimeMonitor;
             _transitionService = transitionService;
             _navigationDrawer = navigationDrawer;
+<<<<<<< HEAD
           
+=======
+            _paramsHolder = paramsHolder;
+            _pages = pages;
+>>>>>>> origin/master
             _customMappings = customMappings;
 			InitPagesMappings();
         }
@@ -108,7 +121,9 @@ namespace TechTalk.Droid.ClientSpecific
             var intent = new Intent(_activityLifeTimeMonitor.Activity, type);
             if (parameter != null)
             {
-                intent.PutExtra(ApplicationConsts.P_NAVIGATION_PARAM, parameter.ToString());
+                var key = Guid.NewGuid().ToString();
+                _paramsHolder.SetParameter(key, parameter);
+                intent.PutExtra(ApplicationConsts.P_NAVIGATION_PARAM, key);
             }
             return intent;
         }
@@ -124,7 +139,9 @@ namespace TechTalk.Droid.ClientSpecific
                 if (paramter != null)
                 {
                     bundle = new Bundle();
-                    bundle.PutString(ApplicationConsts.P_NAVIGATION_PARAM, paramter.ToString());
+                    var key = Guid.NewGuid().ToString();
+                    _paramsHolder.SetParameter(key, paramter);
+                    bundle.PutString(ApplicationConsts.P_NAVIGATION_PARAM, key);
                 }
                 fragment.Arguments = bundle;
             }

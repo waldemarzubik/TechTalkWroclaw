@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical"
     android:layout_width="match_parent"
@@ -11,10 +11,50 @@
         android:minHeight="?attr/actionBarSize"
         android:background="@color/SharpBlue"
         app:contentInsetStart="0dp"
-        app:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar" />
-    <ImageView
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar" />
+    <techtalk.droid.controls.CacheImageView
         android:id="@+id/picture"
+        android:layout_below="@id/toolbar"
         android:transitionName="@string/Picture"
         android:layout_width="match_parent"
         android:layout_height="match_parent" />
-</LinearLayout>
+    <com.github.clans.fab.FloatingActionMenu
+        android:id="@+id/menu"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="15dp"
+        android:layout_marginBottom="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="10dp"
+        app:menu_icon="@drawable/ic_edit"
+        app:menu_animationDelayPerItem="0"
+        app:menu_colorNormal="@color/LimeGreen"
+        app:menu_colorPressed="#2E7D32"
+        app:menu_colorRipple="#1B5E20"
+        app:menu_labels_maxLines="2"
+        app:menu_labels_ellipsize="end">
+        <com.github.clans.fab.FloatingActionButton
+            android:id="@+id/blurButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_blur"
+            app:fab_label="Blur"
+            style="@style/GreenFabButton" />
+        <com.github.clans.fab.FloatingActionButton
+            android:id="@+id/grayscaleButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_grayscale"
+            app:fab_label="Greyscale"
+            style="@style/GreenFabButton" />
+        <com.github.clans.fab.FloatingActionButton
+            android:id="@+id/rotateButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_rotate"
+            app:fab_label="Rotate"
+            style="@style/GreenFabButton" />
+    </com.github.clans.fab.FloatingActionMenu>
+</RelativeLayout>

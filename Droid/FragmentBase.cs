@@ -2,10 +2,11 @@
 using Android.Content;
 using Android.OS;
 using Android.Views;
+using GalaSoft.MvvmLight.Ioc;
 using Microsoft.Practices.ServiceLocation;
-using TechTalk.Consts;
 using TechTalk.Droid.Interfaces;
 using TechTalk.ViewModels;
+using TechTalk.Droid.Extensions;
 
 namespace TechTalk.Droid
 {
@@ -28,7 +29,7 @@ namespace TechTalk.Droid
         {
             if (!RetainInstance)
             {
-                ViewModel = ServiceLocator.Current.GetInstance<T>();
+                ViewModel = SimpleIoc.Default.GetInstanceWithoutCaching<T>();
             }
             base.OnAttach(context);
         }
@@ -36,7 +37,7 @@ namespace TechTalk.Droid
         public override void OnCreate(Bundle savedInstanceState)
         {
             base.OnCreate(savedInstanceState);
-            ViewModel.OnInitialize(GetParameter()).ConfigureAwait(false);
+            ViewModel.OnInitialize(Arguments?.GetNavigationParamter()).ConfigureAwait(false);
         }
 
         public override void OnStart()
@@ -59,15 +60,6 @@ namespace TechTalk.Droid
         public override View OnCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState)
         {
             return inflater.Inflate(_layoutResId, container, false);
-        }
-
-        protected virtual string GetParameter()
-        {
-            if (Arguments != null && Arguments.ContainsKey(ApplicationConsts.P_NAVIGATION_PARAM))
-            {
-                return Arguments.GetString(ApplicationConsts.P_NAVIGATION_PARAM);
-            }
-            return null;
         }
     }
 }

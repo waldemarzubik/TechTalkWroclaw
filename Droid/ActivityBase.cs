@@ -7,8 +7,7 @@ using Microsoft.Practices.ServiceLocation;
 using TechTalk.Droid.Extensions;
 using TechTalk.Droid.Interfaces;
 using TechTalk.ViewModels;
-using TechTalk.Interfaces;
-using System;
+using GalaSoft.MvvmLight.Ioc;
 
 namespace TechTalk.Droid
 {
@@ -34,7 +33,7 @@ namespace TechTalk.Droid
                 OnCreateTransitions();
             }
 
-            ActivityLifeTimeMonitor = ServiceLocator.Current.GetInstance<IActivityLifeTimeMonitor>();
+            ActivityLifeTimeMonitor = SimpleIoc.Default.GetInstanceWithoutCaching<IActivityLifeTimeMonitor>();
             ViewModel = ServiceLocator.Current.GetInstance<T>();
             base.OnCreate(savedInstanceState);
             ActivityLifeTimeMonitor.Activity = this;

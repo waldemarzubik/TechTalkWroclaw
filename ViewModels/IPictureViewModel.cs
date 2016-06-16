@@ -1,10 +1,10 @@
 ﻿using System;
-using TechTalk.ViewModels;
+using TechTalk.DataModels;
 
 namespace TechTalk.ViewModels
 {
     public interface IPictureViewModel : IBaseViewModel
     {
-        string ImageUri { get; set; }
+        Picture Picture { get; set; }
     }
 }
