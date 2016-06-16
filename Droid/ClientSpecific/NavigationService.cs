@@ -8,13 +8,12 @@ using TechTalk.Consts;
 using TechTalk.Droid.Interfaces;
 using TechTalk.Droid.Views;
 using TechTalk.Droid.Views.Fragments;
-using TechTalk.Interfaces;
 using TechTalk.ViewModel;
 using TechTalk.ViewModels;
 
 namespace TechTalk.Droid.ClientSpecific
 {
-	public class NavigationService : NavigationBase
+    public class NavigationService : NavigationBase
     {
 
         private readonly IActivityLifeTimeMonitor _activityLifeTimeMonitor;
@@ -22,43 +21,30 @@ namespace TechTalk.Droid.ClientSpecific
         private readonly ITransitionService _transitionService;
         private readonly INavigationDrawer _navigationDrawer;
         private readonly IParamsHolder _paramsHolder;
-        private readonly Dictionary<string, object> _parametersByKey = new Dictionary<string, object>();
 
         public NavigationService(IActivityLifeTimeMonitor activityLifeTimeMonitor,
                                  ITransitionService transitionService,
                                  INavigationDrawer navigationDrawer,
-<<<<<<< HEAD
-		                         Dictionary<Type, Tuple<Type, int>> customMappings)
-=======
                                  IParamsHolder paramsHolder,
-                                 Dictionary<Type, Type> pages,
                                  Dictionary<Type, Tuple<Type, int>> customMappings)
->>>>>>> origin/master
         {
             _activityLifeTimeMonitor = activityLifeTimeMonitor;
             _transitionService = transitionService;
             _navigationDrawer = navigationDrawer;
-<<<<<<< HEAD
-          
-=======
             _paramsHolder = paramsHolder;
-            _pages = pages;
->>>>>>> origin/master
             _customMappings = customMappings;
-			InitPagesMappings();
+            InitPagesMappings();
         }
 
-		protected override void InitPagesMappings()
-		{
-			NavigationPages.Add(typeof(IMainViewModel), typeof(MainView));
-			NavigationPages.Add(typeof(IMainMenuViewModel), typeof(MainMenuFragment));
-			NavigationPages.Add(typeof(IGalleryViewModel), typeof(GalleryFragment));
-			NavigationPages.Add(typeof(IPictureViewModel), typeof(PictureView));
-		}
+        protected override void InitPagesMappings()
+        {
+            NavigationPages.Add(typeof(IMainViewModel), typeof(MainView));
+            NavigationPages.Add(typeof(IMainMenuViewModel), typeof(MainMenuFragment));
+            NavigationPages.Add(typeof(IGalleryViewModel), typeof(GalleryFragment));
+            NavigationPages.Add(typeof(IPictureViewModel), typeof(PictureView));
+        }
 
-
-
-		private Type CurrentPage
+        private Type CurrentPage
         {
             get
             {
@@ -75,12 +61,12 @@ namespace TechTalk.Droid.ClientSpecific
             throw new NotImplementedException();
         }
 
-        public override void NavigateTo<T>() where T : IBaseViewModel
+        public override void NavigateTo<T>()
         {
             InternalNavigation<T, object>(null);
         }
 
-        public override void NavigateTo<T, G>(G parameter) where T : IBaseViewModel
+        public override void NavigateTo<T, G>(G parameter)
         {
             InternalNavigation<T, G>(parameter);
         }
@@ -95,7 +81,7 @@ namespace TechTalk.Droid.ClientSpecific
                 {
                     var mapping = _customMappings[typeof(T)];
                     //jestesmy juz na odpowiedniej aktywnosci, nawigacja do nowej aktywnosci nie jest potrzebna
-					//English, mf, do you speak it?
+                    //English, mf, do you speak it?
                     if (mapping.Item1 == CurrentPage)
                     {
                         ShowFragment(type, mapping.Item2, parameter);
