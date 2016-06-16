@@ -7,15 +7,26 @@ namespace TechTalk
 {
 	public abstract class NavigationBase : INavigation
 	{
-		public abstract void GoBack();
+		public virtual void GoBack()
+		{
+			throw new NotImplementedException();
+		}
 
-		public abstract void NavigateTo<T>() where T : IBaseViewModel;
+		public virtual void NavigateTo<T>() where T : IBaseViewModel
+		{
+			InternalNavigation<T, object>(null);
+		}
 
-		public abstract void NavigateTo<T, G>(G parameter) where T : IBaseViewModel;
+		public virtual void NavigateTo<T, G>(G parameter) where T : IBaseViewModel
+		{
+			InternalNavigation<T, G>(parameter);
+		}
 
 		protected Dictionary<Type, Type> NavigationPages;
 
 		protected abstract void InitPagesMappings();
+
+		protected abstract void InternalNavigation<T, G>(G parameter) where T : IBaseViewModel;
 
 	}
 }

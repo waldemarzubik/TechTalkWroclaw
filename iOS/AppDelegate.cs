@@ -16,6 +16,8 @@ namespace TechTalk.iOS
             get;
             set;
         }
+		public JASidePanelController viewController
+		{ get; set;}
 
 		public ViewModelLocator ViewModelLocator => _viewModelLocator;
 		private static ViewModelLocator _viewModelLocator;
@@ -38,7 +40,7 @@ namespace TechTalk.iOS
 		public override bool FinishedLaunching(UIApplication application, NSDictionary launchOptions)
         {
 			SafeCreateViewModelLocator();
-            return true;
+			return true;
         }
 
         public override void OnResignActivation(UIApplication application)

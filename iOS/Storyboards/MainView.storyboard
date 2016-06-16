@@ -6,7 +6,7 @@
     <scenes>
         <scene sceneID="38">
             <objects>
-                <viewController id="39" sceneMemberID="viewController">
+                <viewController id="39" sceneMemberID="viewController" customClass="PictureViewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="36"/>
                         <viewControllerLayoutGuide type="bottom" id="37"/>

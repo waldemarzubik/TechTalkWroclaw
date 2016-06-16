@@ -90,6 +90,7 @@ namespace TechTalk.Droid.ClientSpecific
             lock (NavigationPages)
             {
                 var type = NavigationPages[typeof(T)];
+
                 var currentActivity = _activityLifeTimeMonitor.Activity;
                 if (_customMappings.ContainsKey(typeof(T)))
                 {

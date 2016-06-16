@@ -200,6 +200,10 @@
     <Compile Include="PictureCollectionViewController.designer.cs">
       <DependentUpon>PictureCollectionViewController.cs</DependentUpon>
     </Compile>
+    <Compile Include="PictureViewController.cs" />
+    <Compile Include="PictureViewController.designer.cs">
+      <DependentUpon>PictureViewController.cs</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <ITunesArtwork Include="iTunesArtwork" />

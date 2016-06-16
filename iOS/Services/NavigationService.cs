@@ -1,33 +1,46 @@
 ﻿using System;
+using Foundation;
 using GalaSoft.MvvmLight.Views;
 using TechTalk.Interfaces;
+using TechTalk.ViewModel;
 using TechTalk.ViewModels;
+using UIKit;
 
 namespace TechTalk.iOS
 {
-	public class NavigationService: INavigation
+	public class NavigationService: NavigationBase
 	{
-		private readonly INavigationService navigation;
-		public NavigationService()
+		private UIStoryboard MainStoryboard
 		{
-			//Yep, same name. 
-			navigation = new GalaSoft.MvvmLight.Views.NavigationService();
+			get
+			{
+				return UIStoryboard.FromName("MainView", NSBundle.MainBundle);
+			}
 		}
 
-		public void GoBack()
+		
+		protected override void InternalNavigation<T, G>(G parameter) 
 		{
-			throw new NotImplementedException();
+			AppDelegate appDelegate = (AppDelegate)UIApplication.SharedApplication.Delegate;
+
+			lock (NavigationPages)
+			{
+				var type = NavigationPages[typeof(T)];
+	
+				var viewController = (BaseViewController<T>)MainStoryboard.InstantiateViewController(type.Name);
+				viewController.Params = parameter;
+				appDelegate.Window.RootViewController.PresentViewController(viewController, true, null);
+			}
 		}
 
-		public void NavigateTo<T>() where T : IBaseViewModel
+		protected override void InitPagesMappings()
 		{
-			throw new NotImplementedException();
+			NavigationPages.Add(typeof(IMainViewModel), typeof(MainMenuViewController));
+			NavigationPages.Add(typeof(IMainMenuViewModel), typeof(SlideOutMenuViewController));
+			NavigationPages.Add(typeof(IGalleryViewModel), typeof(PictureCollectionViewController));
+			NavigationPages.Add(typeof(IPictureViewModel), typeof(PictureViewController));
 		}
-
-		public void NavigateTo<T, G>(G parameter) where T : IBaseViewModel
-		{
-			throw new NotImplementedException();
-		}
+		
 	}
 }
 
