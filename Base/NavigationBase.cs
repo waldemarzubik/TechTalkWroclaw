@@ -5,6 +5,7 @@ using TechTalk.ViewModels;
 
 namespace TechTalk
 {
+<<<<<<< HEAD
 	public abstract class NavigationBase : INavigation
 	{
 		public virtual void GoBack()
@@ -21,13 +22,26 @@ namespace TechTalk
 		{
 			InternalNavigation<T, G>(parameter);
 		}
+=======
+    public abstract class NavigationBase : INavigation
+    {
+        public abstract void GoBack();
 
-		protected Dictionary<Type, Type> NavigationPages;
+        public abstract void NavigateTo<T>() where T : IBaseViewModel;
 
-		protected abstract void InitPagesMappings();
+        public abstract void NavigateTo<T, G>(G parameter) where T : IBaseViewModel;
+>>>>>>> origin/master
 
+        protected Dictionary<Type, Type> NavigationPages = new Dictionary<Type, Type>();
+
+        protected abstract void InitPagesMappings();
+
+<<<<<<< HEAD
 		protected abstract void InternalNavigation<T, G>(G parameter) where T : IBaseViewModel;
 
 	}
+=======
+    }
+>>>>>>> origin/master
 }
 
