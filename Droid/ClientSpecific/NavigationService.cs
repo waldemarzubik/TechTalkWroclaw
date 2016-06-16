@@ -6,14 +6,17 @@ using Android.OS;
 using Android.Support.V4.App;
 using TechTalk.Consts;
 using TechTalk.Droid.Interfaces;
+using TechTalk.Droid.Views;
+using TechTalk.Droid.Views.Fragments;
 using TechTalk.Interfaces;
+using TechTalk.ViewModel;
 using TechTalk.ViewModels;
 
 namespace TechTalk.Droid.ClientSpecific
 {
-    public class NavigationService : INavigation
+	public class NavigationService : NavigationBase
     {
-        private readonly Dictionary<Type, Type> _pages;
+
         private readonly IActivityLifeTimeMonitor _activityLifeTimeMonitor;
         private readonly Dictionary<Type, Tuple<Type, int>> _customMappings;
         private readonly ITransitionService _transitionService;
@@ -22,48 +25,58 @@ namespace TechTalk.Droid.ClientSpecific
         public NavigationService(IActivityLifeTimeMonitor activityLifeTimeMonitor,
                                  ITransitionService transitionService,
                                  INavigationDrawer navigationDrawer,
-                                 Dictionary<Type, Type> pages,
-                                 Dictionary<Type, Tuple<Type, int>> customMappings)
+		                         Dictionary<Type, Tuple<Type, int>> customMappings)
         {
             _activityLifeTimeMonitor = activityLifeTimeMonitor;
             _transitionService = transitionService;
             _navigationDrawer = navigationDrawer;
-            _pages = pages;
+          
             _customMappings = customMappings;
+			InitPagesMappings();
         }
 
-        private Type CurrentPage
+		protected override void InitPagesMappings()
+		{
+			NavigationPages.Add(typeof(IMainViewModel), typeof(MainView));
+			NavigationPages.Add(typeof(IMainMenuViewModel), typeof(MainMenuFragment));
+			NavigationPages.Add(typeof(IGalleryViewModel), typeof(GalleryFragment));
+			NavigationPages.Add(typeof(IPictureViewModel), typeof(PictureView));
+		}
+
+
+
+		private Type CurrentPage
         {
             get
             {
-                lock (_pages)
+                lock (NavigationPages)
                 {
-                    var item = _pages.FirstOrDefault(i => i.Value == _activityLifeTimeMonitor.Activity.GetType());
+                    var item = NavigationPages.FirstOrDefault(i => i.Value == _activityLifeTimeMonitor.Activity.GetType());
                     return item.Key;
                 }
             }
         }
 
-        public void GoBack()
+        public override void GoBack()
         {
             throw new NotImplementedException();
         }
 
-        public void NavigateTo<T>() where T : IBaseViewModel
+        public override void NavigateTo<T>() where T : IBaseViewModel
         {
             InternalNavigation<T, object>(null);
         }
 
-        public void NavigateTo<T, G>(G parameter) where T : IBaseViewModel
+        public override void NavigateTo<T, G>(G parameter) where T : IBaseViewModel
         {
             InternalNavigation<T, G>(parameter);
         }
 
         private void InternalNavigation<T, G>(G parameter) where T : IBaseViewModel
         {
-            lock (_pages)
+            lock (NavigationPages)
             {
-                var type = _pages[typeof(T)];
+                var type = NavigationPages[typeof(T)];
                 var currentActivity = _activityLifeTimeMonitor.Activity;
                 if (_customMappings.ContainsKey(typeof(T)))
                 {

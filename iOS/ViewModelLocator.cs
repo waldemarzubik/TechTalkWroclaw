@@ -9,15 +9,6 @@ namespace TechTalk.iOS
     {
 		protected override Func<IGalleryService> GalleryServiceFunc => () => new GalleryService();
 
-
-		protected override Dictionary<Type, Type> NavigationPages
-        {
-            get
-            {
-                throw new NotImplementedException();
-            }
-        }
-
 		protected override Func<INavigation> NavigationServiceFunc => () => new NavigationService();
 
         

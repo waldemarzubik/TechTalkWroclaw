@@ -15,8 +15,6 @@ namespace TechTalk
 
         protected abstract Func<IGalleryService> GalleryServiceFunc { get; }
 
-        protected abstract Dictionary<Type, Type> NavigationPages { get; }
-
         protected ViewModelLocatorBase()
         {
             ServiceLocator.SetLocatorProvider(() => SimpleIoc.Default);
