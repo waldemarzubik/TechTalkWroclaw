@@ -69,6 +69,7 @@ namespace TechTalk.Droid.ClientSpecific
                 {
                     var mapping = _customMappings[typeof(T)];
                     //jestesmy juz na odpowiedniej aktywnosci, nawigacja do nowej aktywnosci nie jest potrzebna
+					//English, mf, do you speak it?
                     if (mapping.Item1 == CurrentPage)
                     {
                         ShowFragment(type, mapping.Item2, parameter);

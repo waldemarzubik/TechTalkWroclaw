@@ -116,6 +116,9 @@
     <Reference Include="FFImageLoading.Transformations">
       <HintPath>..\packages\Xamarin.FFImageLoading.Transformations.2.1.5\lib\Xamarin.iOS10\FFImageLoading.Transformations.dll</HintPath>
     </Reference>
+    <Reference Include="JASidePanels">
+      <HintPath>..\Components\jasidepanels-1.3.2.2\lib\ios-unified\JASidePanels.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\TechTalk.csproj">
@@ -183,10 +186,30 @@
     <Compile Include="AppDelegate.cs" />
     <Compile Include="ViewModelLocator.cs" />
     <Compile Include="Services\GalleryService.cs" />
+    <Compile Include="Services\NavigationService.cs" />
+    <Compile Include="SlideOutMenuViewController.cs" />
+    <Compile Include="SlideOutMenuViewController.designer.cs">
+      <DependentUpon>SlideOutMenuViewController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PictureCollectionViewController.cs" />
+    <Compile Include="PictureCollectionViewController.designer.cs">
+      <DependentUpon>PictureCollectionViewController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MainMenuViewController.cs" />
+    <Compile Include="MainMenuViewController.designer.cs">
+      <DependentUpon>MainMenuViewController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BaseViewController.cs" />
   </ItemGroup>
   <ItemGroup>
     <ITunesArtwork Include="iTunesArtwork" />
     <ITunesArtwork Include="iTunesArtwork%402x" />
+  </ItemGroup>
+  <ItemGroup>
+    <XamarinComponentReference Include="jasidepanels">
+      <Version>1.3.2.2</Version>
+      <Visible>False</Visible>
+    </XamarinComponentReference>
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />
 </Project>

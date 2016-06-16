@@ -7,15 +7,10 @@ namespace TechTalk.iOS
 {
     public sealed class ViewModelLocator : ViewModelLocatorBase
     {
-        protected override Func<IGalleryService> GalleryServiceFunc
-        {
-            get
-            {
-                throw new NotImplementedException();
-            }
-        }
+		protected override Func<IGalleryService> GalleryServiceFunc => () => new GalleryService();
 
-        protected override Dictionary<Type, Type> NavigationPages
+
+		protected override Dictionary<Type, Type> NavigationPages
         {
             get
             {

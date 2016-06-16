@@ -1,4 +1,5 @@
 ﻿using Foundation;
+using JASidePanels;
 using UIKit;
 
 namespace TechTalk.iOS
@@ -16,11 +17,27 @@ namespace TechTalk.iOS
             set;
         }
 
-        public override bool FinishedLaunching(UIApplication application, NSDictionary launchOptions)
-        {
-            // Override point for customization after application launch.
-            // If not required for your application you can safely delete this method
+		public ViewModelLocator ViewModelLocator => _viewModelLocator;
+		private static ViewModelLocator _viewModelLocator;
+		private static readonly object _lock = new object();
 
+		private void SafeCreateViewModelLocator()
+		{
+			if (_viewModelLocator == null)
+			{
+				lock (_lock)
+				{
+					if (_viewModelLocator == null)
+					{
+						_viewModelLocator = new ViewModelLocator();
+					}
+				}
+			}
+		}
+
+		public override bool FinishedLaunching(UIApplication application, NSDictionary launchOptions)
+        {
+			SafeCreateViewModelLocator();
             return true;
         }
 

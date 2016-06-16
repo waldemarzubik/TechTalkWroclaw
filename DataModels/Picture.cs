@@ -23,6 +23,6 @@ namespace TechTalk.DataModels
 		/// Optional
 		/// </summary>
 		/// <value>The thumbnail handler.</value>
-		public IntPtr ThumbnailHandler { get; set; }
+		public IntPtr ThumbnailHandle { get; set; }
     }
 }
