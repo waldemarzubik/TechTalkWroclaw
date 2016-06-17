@@ -56,22 +56,7 @@ namespace TechTalk.Droid.ClientSpecific
             }
         }
 
-        public override void GoBack()
-        {
-            throw new NotImplementedException();
-        }
-
-        public override void NavigateTo<T>()
-        {
-            InternalNavigation<T, object>(null);
-        }
-
-        public override void NavigateTo<T, G>(G parameter)
-        {
-            InternalNavigation<T, G>(parameter);
-        }
-
-        private void InternalNavigation<T, G>(G parameter) where T : IBaseViewModel
+        protected override void InternalNavigation<T, G>(G parameter)
         {
             lock (NavigationPages)
             {
