@@ -1,9 +1,9 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <resources xmlns:tools="http://schemas.android.com/tools">
-	<style name="GreenFabButton">
+	<!--<style name="GreenFabButton">
 		<item name="fab_size">mini</item>
 		<item name="fab_colorNormal">@color/LimeGreen</item>
 		<item name="fab_colorPressed">#2E7D32</item>
 		<item name="fab_colorRipple">#1B5E20</item>
-	</style>
+	</style>-->
 </resources>

@@ -1,45 +1,24 @@
 ﻿using System;
-using System.Collections.Generic;
-using GalaSoft.MvvmLight.Ioc;
-using Microsoft.Practices.ServiceLocation;
-using TechTalk.Droid.ClientSpecific;
-using TechTalk.Droid.Interfaces;
-using TechTalk.Droid.Views;
 using TechTalk.Interfaces;
-using TechTalk.ViewModels;
-using TechTalk.ViewModel;
-using TechTalk.Droid.Views.Fragments;
 
 namespace TechTalk.Droid
 {
     public class ViewModelLocator : ViewModelLocatorBase
     {
-        protected override Func<IGalleryService> GalleryServiceFunc => () => new GalleryService(ServiceLocator.Current.GetInstance<IActivityLifeTimeMonitor>());
-
-        private Dictionary<Type, Tuple<Type, int>> CustomMappings
+        protected override Func<IGalleryService> GalleryServiceFunc
         {
             get
             {
-                var dictonary = new Dictionary<Type, Tuple<Type, int>>();
-                dictonary.Add(typeof(IGalleryViewModel), new Tuple<Type, int>(typeof(IMainViewModel), Resource.Id.drawerContent));
-                dictonary.Add(typeof(IMainMenuViewModel), new Tuple<Type, int>(typeof(IMainViewModel), Resource.Id.navigationDrawer));
-                return dictonary;
+                throw new NotImplementedException();
             }
         }
 
-        protected override Func<INavigation> NavigationServiceFunc => () =>
-            new NavigationService(ServiceLocator.Current.GetInstance<IActivityLifeTimeMonitor>(),
-                                  ServiceLocator.Current.GetInstance<ITransitionService>(),
-                                  ServiceLocator.Current.GetInstance<INavigationDrawer>(),
-                                  ServiceLocator.Current.GetInstance<IParamsHolder>(),
-                                  CustomMappings);
-
-        public ViewModelLocator()
+        protected override Func<INavigation> NavigationServiceFunc
         {
-            SimpleIoc.Default.Register<IActivityLifeTimeMonitor, ActivityLifeTimeMonitor>();
-            SimpleIoc.Default.Register<ITransitionService, TransitionService>();
-            SimpleIoc.Default.Register<INavigationDrawer, NavigationDrawerService>();
-            SimpleIoc.Default.Register<IParamsHolder, ParamsHolder>();
+            get
+            {
+                throw new NotImplementedException();
+            }
         }
     }
 }

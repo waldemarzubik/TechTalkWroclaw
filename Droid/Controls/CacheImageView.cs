@@ -5,8 +5,6 @@ using Android.Util;
 using FFImageLoading;
 using FFImageLoading.Views;
 using FFImageLoading.Work;
-using System.Threading.Tasks;
-using Java.IO;
 
 namespace TechTalk.Droid.Controls
 {

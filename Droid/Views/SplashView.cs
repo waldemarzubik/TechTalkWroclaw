@@ -1,7 +1,6 @@
 ﻿using Android.App;
 using Android.OS;
 using Android.Support.V7.App;
-using GalaSoft.MvvmLight.Ioc;
 using TechTalk.Interfaces;
 using System.Threading.Tasks;
 using TechTalk.ViewModels;

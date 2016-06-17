@@ -107,28 +107,19 @@
     <Compile Include="Resources\Resource.designer.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="ViewModelLocator.cs" />
-    <Compile Include="ClientSpecific\GalleryService.cs" />
-    <Compile Include="ClientSpecific\NavigationService.cs" />
     <Compile Include="ActivityBase.cs" />
-    <Compile Include="Views\MainView.cs" />
     <Compile Include="Extensions\IntentExtensions.cs" />
-    <Compile Include="Views\SplashView.cs" />
     <Compile Include="App.cs" />
     <Compile Include="Interfaces\IActivityLifeTimeMonitor.cs" />
     <Compile Include="Interfaces\ITransitionService.cs" />
     <Compile Include="ClientSpecific\TransitionService.cs" />
     <Compile Include="ClientSpecific\ActivityLifeTimeMonitor.cs" />
-    <Compile Include="Views\PictureView.cs" />
-    <Compile Include="Views\Fragments\GalleryFragment.cs" />
     <Compile Include="FragmentBase.cs" />
-    <Compile Include="Interfaces\IDrawerHandler.cs" />
-    <Compile Include="Interfaces\INavigationDrawer.cs" />
-    <Compile Include="ClientSpecific\NavigationDrawerService.cs" />
-    <Compile Include="Views\Fragments\MainMenuFragment.cs" />
     <Compile Include="DolanPlzInclude.cs" />
     <Compile Include="Interfaces\IParamsHolder.cs" />
     <Compile Include="ClientSpecific\ParamsHolder.cs" />
     <Compile Include="Controls\CacheImageView.cs" />
+    <Compile Include="Views\SplashView.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\AboutResources.txt" />
@@ -141,10 +132,8 @@
     </None>
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\layout\MainView.axml" />
     <AndroidResource Include="Resources\values\Themes.xml" />
     <AndroidResource Include="Resources\values\Colors.xml" />
-    <AndroidResource Include="Resources\layout\Toolbar.xml" />
     <AndroidResource Include="Resources\mipmap-hdpi\ic_launcher.png" />
     <AndroidResource Include="Resources\mipmap\ic_launcher.png" />
     <AndroidResource Include="Resources\mipmap-xhdpi\ic_launcher.png" />
@@ -153,17 +142,11 @@
     <AndroidResource Include="Resources\layout\SplashView.axml" />
     <AndroidResource Include="Resources\drawable\splash.xml" />
     <AndroidResource Include="Resources\drawable\logo.png" />
-    <AndroidResource Include="Resources\layout\PictureView.axml" />
-    <AndroidResource Include="Resources\layout\GalleryView.axml" />
-    <AndroidResource Include="Resources\layout\MainMenuView.axml" />
-    <AndroidResource Include="Resources\layout\MenuHeader.axml" />
-    <AndroidResource Include="Resources\layout\Item_Picture.axml" />
     <AndroidResource Include="Resources\drawable\ic_about.xml" />
     <AndroidResource Include="Resources\drawable\ic_cool.xml" />
     <AndroidResource Include="Resources\drawable\ic_gallery.xml" />
     <AndroidResource Include="Resources\drawable\ic_noob.xml" />
     <AndroidResource Include="Resources\drawable\ic_rush.xml" />
-    <AndroidResource Include="Resources\values\TransitionNames.xml" />
     <AndroidResource Include="Resources\values\Styles.xml" />
     <AndroidResource Include="Resources\drawable\ic_close.xml" />
     <AndroidResource Include="Resources\drawable\ic_edit.xml" />
@@ -184,6 +167,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Controls\" />
+    <Folder Include="Views\Fragments\" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
   <Import Project="..\packages\Xamarin.Android.Support.Vector.Drawable.23.3.0\build\Xamarin.Android.Support.Vector.Drawable.targets" Condition="Exists('..\packages\Xamarin.Android.Support.Vector.Drawable.23.3.0\build\Xamarin.Android.Support.Vector.Drawable.targets')" />
