@@ -34,6 +34,17 @@ namespace TechTalk.iOS
 			UIPinchGestureRecognizer pinch = new UIPinchGestureRecognizer(handlePinchGesture);
 			CollectionView.AddGestureRecognizer(pinch);
 
+			UIView.Animate(
+			0.25,
+			() =>
+			{
+				CollectionView.Alpha = 1;
+			},
+			() =>
+			{
+				CollectionView.Alpha = 1;
+			});
+
 		}
 
 

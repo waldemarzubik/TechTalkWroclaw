@@ -31,13 +31,22 @@ namespace TechTalk.iOS
 			{
 				var type = NavigationPages[typeof(T)];
 	
-				var viewController = (BaseViewController<T>)MainStoryboard.InstantiateViewController(type.Name);
-				viewController.Params = parameter;
+
 				var mainViewController = appDelegate.Window.RootViewController as MainMenuViewController;
-				if (mainViewController != null && mainViewController.CenterPanel.GetType() != viewController.GetType())
+				if (mainViewController != null)
 				{
-					mainViewController.CenterPanel = viewController;
+					if (mainViewController.CenterPanel.GetType() != type)
+					{
+						var viewController = (BaseViewController<T>)MainStoryboard.InstantiateViewController(type.Name);
+						viewController.Params = parameter;
+
+						mainViewController.CenterPanel = viewController;
+
+					}
+
+					mainViewController.ShowCenterPanelAnimated(true);
 				}
+
 
 			}
 		}

@@ -211,6 +211,7 @@
     </Compile>
     <Compile Include="Helpers\CollectionViewZoomDelegate.cs" />
     <Compile Include="Helpers\CollectionViewSourceEx.cs" />
+    <Compile Include="Helpers\TableViewSourceEx.cs" />
   </ItemGroup>
   <ItemGroup>
     <ITunesArtwork Include="iTunesArtwork" />

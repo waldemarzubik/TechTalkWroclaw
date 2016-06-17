@@ -14,8 +14,16 @@ namespace TechTalk.iOS
     [Register ("SlideOutMenuViewController")]
     partial class SlideOutMenuViewController
     {
+        [Outlet]
+        [GeneratedCode ("iOS Designer", "1.0")]
+        UIKit.UITableView MenuItemTable { get; set; }
+
         void ReleaseDesignerOutlets ()
         {
+            if (MenuItemTable != null) {
+                MenuItemTable.Dispose ();
+                MenuItemTable = null;
+            }
         }
     }
 }

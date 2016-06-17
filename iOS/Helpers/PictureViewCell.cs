@@ -50,7 +50,6 @@ namespace TechTalk.iOS
 		public PictureViewCell(CGRect frame) : base (frame)
 		{
 			_assetLib = new ALAssetsLibrary();
-			BackgroundColor = UIColor.Cyan;
 			_imageView = new UIImageView(Bounds);
 			_imageView.AutoresizingMask = UIViewAutoresizing.FlexibleHeight | UIViewAutoresizing.FlexibleWidth;
 			_imageView.ContentMode = UIViewContentMode.ScaleAspectFill;

@@ -1,4 +1,5 @@
 ﻿using System;
+using CoreGraphics;
 using Foundation;
 using GalaSoft.MvvmLight.Helpers;
 using TechTalk.DataModels;
@@ -8,7 +9,6 @@ namespace TechTalk.iOS
 {
 	public class CollectionViewSourceEx : ObservableCollectionViewSource<Picture, PictureViewCell>
 	{
-		
 		public override void ItemDeselected(UICollectionView collectionView, NSIndexPath indexPath)
 		{
 			SelectedItem = null;

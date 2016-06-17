@@ -4,12 +4,13 @@ using UIKit;
 using TechTalk.ViewModels;
 using AssetsLibrary;
 using TechTalk.DataModels;
+using CoreGraphics;
 
 namespace TechTalk.iOS
 {
     public partial class PictureViewController : BaseViewController<IPictureViewModel>
     {
-
+		
 		private readonly ALAssetsLibrary _assetLib;
 
 		public PictureViewController (IntPtr handle) : base (handle)
@@ -19,7 +20,7 @@ namespace TechTalk.iOS
 
 		public override void ViewDidLoad()
 		{
-			
+			ImageView.Alpha = 0;
 			var picture = Params as Picture;
 
 			_assetLib.AssetForUrl(
@@ -39,6 +40,22 @@ namespace TechTalk.iOS
 					);
 
 			base.ViewDidLoad();
+
+			Animate();
 		}
-    }
+
+		void Animate()
+		{
+			UIView.Animate(
+			0.25,
+			() =>
+			{
+				ImageView.Alpha = 1;
+			},
+			() =>
+			{
+				ImageView.Alpha = 1;
+			});
+		}
+}
 }
