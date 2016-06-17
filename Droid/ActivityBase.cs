@@ -28,11 +28,6 @@ namespace TechTalk.Droid
 
         protected override void OnCreate(Bundle savedInstanceState)
         {
-            if (Build.VERSION.SdkInt >= BuildVersionCodes.Lollipop)
-            {
-                OnCreateTransitions();
-            }
-
             ActivityLifeTimeMonitor = SimpleIoc.Default.GetInstanceWithoutCaching<IActivityLifeTimeMonitor>();
             ViewModel = ServiceLocator.Current.GetInstance<T>();
             base.OnCreate(savedInstanceState);
@@ -40,16 +35,6 @@ namespace TechTalk.Droid
             SetContentView(_layoutResId);
 
             ViewModel.OnInitialize(Intent.GetNavigationParamter()).ConfigureAwait(false);
-
-            if (Build.VERSION.SdkInt >= BuildVersionCodes.Lollipop)
-            {
-                using (var bitmap = BitmapFactory.DecodeResource(Resources, Resource.Mipmap.ic_launcher))
-                {
-                    var taskDesc = new ActivityManager.TaskDescription("TechTalk#2", bitmap, Resources.GetColor(Resource.Color.LimeGreen));
-                    SetTaskDescription(taskDesc);
-                    bitmap.Recycle();
-                }
-            }
         }
 
         public override void SetContentView(int layoutResID)
@@ -98,11 +83,6 @@ namespace TechTalk.Droid
                 SupportActionBar.SetDisplayHomeAsUpEnabled(true);
                 SupportActionBar.SetHomeButtonEnabled(true);
             }
-        }
-
-        protected virtual void OnCreateTransitions()
-        {
-            //override this to use material design transitions
         }
     }
 }
