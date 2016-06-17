@@ -14,8 +14,16 @@ namespace TechTalk.iOS
     [Register ("PictureViewController")]
     partial class PictureViewController
     {
+        [Outlet]
+        [GeneratedCode ("iOS Designer", "1.0")]
+        UIKit.UIImageView ImageView { get; set; }
+
         void ReleaseDesignerOutlets ()
         {
+            if (ImageView != null) {
+                ImageView.Dispose ();
+                ImageView = null;
+            }
         }
     }
 }

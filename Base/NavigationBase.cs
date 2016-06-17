@@ -7,6 +7,7 @@ namespace TechTalk
 {
 	public abstract class NavigationBase : INavigation
 	{
+
 		public virtual void GoBack()
 		{
 			throw new NotImplementedException();
@@ -22,7 +23,7 @@ namespace TechTalk
 			InternalNavigation<T, G>(parameter);
 		}
 
-		protected Dictionary<Type, Type> NavigationPages;
+		protected Dictionary<Type, Type> NavigationPages = new Dictionary<Type, Type>();
 		protected abstract void InitPagesMappings();
 
 		protected abstract void InternalNavigation<T, G>(G parameter) where T : IBaseViewModel;

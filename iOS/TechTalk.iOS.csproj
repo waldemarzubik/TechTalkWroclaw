@@ -171,6 +171,7 @@
     <Folder Include="Resources\" />
     <Folder Include="Storyboards\" />
     <Folder Include="Services\" />
+    <Folder Include="Helpers\" />
   </ItemGroup>
   <ItemGroup>
     <InterfaceDefinition Include="LaunchScreen.storyboard" />
@@ -204,6 +205,12 @@
     <Compile Include="PictureViewController.designer.cs">
       <DependentUpon>PictureViewController.cs</DependentUpon>
     </Compile>
+    <Compile Include="Helpers\PictureViewCell.cs" />
+    <Compile Include="Helpers\PictureViewCell.designer.cs">
+      <DependentUpon>PictureViewCell.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Helpers\CollectionViewZoomDelegate.cs" />
+    <Compile Include="Helpers\CollectionViewSourceEx.cs" />
   </ItemGroup>
   <ItemGroup>
     <ITunesArtwork Include="iTunesArtwork" />

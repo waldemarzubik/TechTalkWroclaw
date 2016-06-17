@@ -18,6 +18,10 @@ namespace TechTalk.iOS
 			}
 		}
 
+		public NavigationService()
+		{
+			InitPagesMappings();
+		}
 		
 		protected override void InternalNavigation<T, G>(G parameter) 
 		{
@@ -29,7 +33,12 @@ namespace TechTalk.iOS
 	
 				var viewController = (BaseViewController<T>)MainStoryboard.InstantiateViewController(type.Name);
 				viewController.Params = parameter;
-				appDelegate.Window.RootViewController.PresentViewController(viewController, true, null);
+				var mainViewController = appDelegate.Window.RootViewController as MainMenuViewController;
+				if (mainViewController != null && mainViewController.CenterPanel.GetType() != viewController.GetType())
+				{
+					mainViewController.CenterPanel = viewController;
+				}
+
 			}
 		}
 

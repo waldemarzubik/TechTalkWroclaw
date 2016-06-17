@@ -9,6 +9,7 @@ namespace TechTalk.iOS
     {
         public MainMenuViewController (IntPtr handle) : base (handle)
         {
+			
         }
 
 		public override void AwakeFromNib() {

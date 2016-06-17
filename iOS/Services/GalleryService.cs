@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Threading.Tasks;
 using AssetsLibrary;
+using Foundation;
 using TechTalk.DataModels;
 using TechTalk.Interfaces;
 
@@ -10,23 +11,24 @@ namespace TechTalk.iOS
 	public class GalleryService: IGalleryService
 	{
 		private readonly IList<Picture> pictures;
+		private TaskCompletionSource<IList<Picture>> taskCompletionSource;
 		public GalleryService()
 		{
 			pictures = new List<Picture>();
+
 		}
 
 		public Task<IList<Picture>> LoadImagesAsync()
 		{
-			var taskCompletionSource = new TaskCompletionSource<IList<Picture>>();
-
+			taskCompletionSource = new TaskCompletionSource<IList<Picture>>();
 			//Clean the mess
 			pictures.Clear();
 			var library = new ALAssetsLibrary();
-			library.Enumerate(ALAssetsGroupType.SavedPhotos, GroupEnumerator, null);
-
-			//fingers crossed
-			taskCompletionSource.TrySetResult(pictures);
-
+			library.Enumerate(ALAssetsGroupType.All, GroupEnumerator, 
+			                  (NSError e) => { 
+								Console.WriteLine("Could not enumerate albums: " + e.LocalizedDescription); }
+			                 	);
+			
 			//whooo hoo
 			return taskCompletionSource.Task;
 		}
@@ -43,6 +45,7 @@ namespace TechTalk.iOS
 				group.Enumerate(AssetEnumerator);
 				shouldStop = false;
 			}
+			taskCompletionSource.TrySetResult(pictures);
 		}
 
 		private void AssetEnumerator(ALAsset asset, nint index, ref bool shouldStop)
@@ -58,6 +61,7 @@ namespace TechTalk.iOS
 					ThumbnailHandle = asset.Thumbnail.Handle, 
 					Uri = asset.AssetUrl.ToString()
 				};
+
 				pictures.Add(picture);
 				shouldStop = false;
 			}
