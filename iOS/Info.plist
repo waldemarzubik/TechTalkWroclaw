@@ -44,5 +44,9 @@
 	<string>Assets.xcassets/AppIcons.appiconset</string>
 	<key>XSLaunchImageAssets</key>
 	<string>Assets.xcassets/LaunchImage.launchimage</string>
+	<key>UIAppFonts</key>
+	<array>
+		<string>FontAwesome.ttf</string>
+	</array>
 </dict>
 </plist>

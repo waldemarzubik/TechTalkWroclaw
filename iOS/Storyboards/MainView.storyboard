@@ -50,8 +50,8 @@
                         <color key="backgroundColor" colorSpace="calibratedRGB" red="0.19215686274509805" green="0.70980392156862748" blue="0.803921568627451" alpha="1"/>
                         <prototypes/>
                         <color key="sectionIndexBackgroundColor" colorSpace="calibratedRGB" red="0.2196078431372549" green="0.76078431372549016" blue="0.83921568627450982" alpha="1"/>
-                        <imageView userInteractionEnabled="NO" contentMode="center" id="161" key="tableHeaderView" image="Image">
-                            <rect key="frame" x="0.0" y="0.0" width="600" height="128"/>
+                        <imageView userInteractionEnabled="NO" contentMode="bottom" id="161" key="tableHeaderView" image="Image">
+                            <rect key="frame" x="0.0" y="0.0" width="600" height="150"/>
                             <color key="backgroundColor" colorSpace="calibratedWhite" white="1" alpha="1"/>
                         </imageView>
                     </tableView>

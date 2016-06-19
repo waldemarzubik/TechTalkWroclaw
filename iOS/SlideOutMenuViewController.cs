@@ -29,7 +29,9 @@ namespace TechTalk.iOS
 
 		private void BindCell(UITableViewCell cell, string item, NSIndexPath path)
 		{
+			
 			cell.TextLabel.Text = item;
+			IconMapper.MapMenuTextLabel(cell.TextLabel);
 			cell.BackgroundColor = EpamStyles.PrimaryColor1;
 		}
 
