@@ -42,7 +42,14 @@ namespace TechTalk.iOS
 			base.ViewDidLoad();
 
 			Animate();
+
+			ScrollImageView.MaximumZoomScale = 3f;
+			ScrollImageView.MinimumZoomScale = 1f;
+			ScrollImageView.ViewForZoomingInScrollView += (UIScrollView sv) => { return ImageView; };
+			
 		}
+
+
 
 		void Animate()
 		{

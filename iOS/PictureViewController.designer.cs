@@ -18,11 +18,20 @@ namespace TechTalk.iOS
         [GeneratedCode ("iOS Designer", "1.0")]
         UIKit.UIImageView ImageView { get; set; }
 
+        [Outlet]
+        [GeneratedCode ("iOS Designer", "1.0")]
+        UIKit.UIScrollView ScrollImageView { get; set; }
+
         void ReleaseDesignerOutlets ()
         {
             if (ImageView != null) {
                 ImageView.Dispose ();
                 ImageView = null;
+            }
+
+            if (ScrollImageView != null) {
+                ScrollImageView.Dispose ();
+                ScrollImageView = null;
             }
         }
     }

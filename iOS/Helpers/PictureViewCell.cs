@@ -52,7 +52,7 @@ namespace TechTalk.iOS
 			_assetLib = new ALAssetsLibrary();
 			_imageView = new UIImageView(Bounds);
 			_imageView.AutoresizingMask = UIViewAutoresizing.FlexibleHeight | UIViewAutoresizing.FlexibleWidth;
-			_imageView.ContentMode = UIViewContentMode.ScaleAspectFill;
+			_imageView.ContentMode = UIViewContentMode.ScaleToFill;
 			_imageView.ClipsToBounds = true;
 			_imageView.Layer.EdgeAntialiasingMask = CAEdgeAntialiasingMask.LeftEdge | CAEdgeAntialiasingMask.RightEdge | CAEdgeAntialiasingMask.BottomEdge | CAEdgeAntialiasingMask.TopEdge;
 			ContentView.AddSubview(_imageView);

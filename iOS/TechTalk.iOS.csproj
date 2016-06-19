@@ -163,9 +163,12 @@
     <ImageAsset Include="Resources\iTunesArtwork%402x.png">
       <InProject>false</InProject>
     </ImageAsset>
-    <ImageAsset Include="Assets.xcassets\LaunchImage.launchimage\Contents.json">
-      <InProject>false</InProject>
-    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\LaunchImage.launchimage\Contents.json" />
+    <ImageAsset Include="Assets.xcassets\LaunchImage.launchimage\appletv.png" />
+    <ImageAsset Include="Assets.xcassets\LaunchImage.launchimage\Ratina55.png" />
+    <ImageAsset Include="Assets.xcassets\LaunchImage.launchimage\Ratina47.png" />
+    <ImageAsset Include="Assets.xcassets\Image.imageset\Contents.json" />
+    <ImageAsset Include="Assets.xcassets\Image.imageset\EPAM_LOGO_Full_Color_RGB.png" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Resources\" />
@@ -174,7 +177,6 @@
     <Folder Include="Helpers\" />
   </ItemGroup>
   <ItemGroup>
-    <InterfaceDefinition Include="LaunchScreen.storyboard" />
     <InterfaceDefinition Include="Storyboards\MainView.storyboard" />
   </ItemGroup>
   <ItemGroup>
@@ -212,10 +214,7 @@
     <Compile Include="Helpers\CollectionViewZoomDelegate.cs" />
     <Compile Include="Helpers\CollectionViewSourceEx.cs" />
     <Compile Include="Helpers\TableViewSourceEx.cs" />
-  </ItemGroup>
-  <ItemGroup>
-    <ITunesArtwork Include="iTunesArtwork" />
-    <ITunesArtwork Include="iTunesArtwork%402x" />
+    <Compile Include="Helpers\EpamStyles.cs" />
   </ItemGroup>
   <ItemGroup>
     <XamarinComponentReference Include="jasidepanels">

@@ -31,20 +31,12 @@ namespace TechTalk.iOS
 		
 			CollectionView.RegisterClassForCell(typeof(PictureViewCell), PictureViewCell.Key);
 			CollectionView.AllowsSelection = true;
+
+		
+
+
 			UIPinchGestureRecognizer pinch = new UIPinchGestureRecognizer(handlePinchGesture);
 			CollectionView.AddGestureRecognizer(pinch);
-
-			UIView.Animate(
-			0.25,
-			() =>
-			{
-				CollectionView.Alpha = 1;
-			},
-			() =>
-			{
-				CollectionView.Alpha = 1;
-			});
-
 		}
 
 

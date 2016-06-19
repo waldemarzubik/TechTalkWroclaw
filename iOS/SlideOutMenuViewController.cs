@@ -18,6 +18,7 @@ namespace TechTalk.iOS
 		public override void ViewDidLoad()
 		{
 			base.ViewDidLoad();
+			View.BackgroundColor = EpamStyles.PrimaryColor1;
 			menuSource = ViewModel.Menu.GetTableViewSource<string>(
 				BindCell, null, () => new TableViewSourceEx());
 		
@@ -29,6 +30,7 @@ namespace TechTalk.iOS
 		private void BindCell(UITableViewCell cell, string item, NSIndexPath path)
 		{
 			cell.TextLabel.Text = item;
+			cell.BackgroundColor = EpamStyles.PrimaryColor1;
 		}
 
 

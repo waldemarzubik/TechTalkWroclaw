@@ -13,9 +13,9 @@ namespace TechTalk.iOS
         }
 
 		public override void AwakeFromNib() {
-			LeftPanel = Storyboard.InstantiateViewController("SlideOutMenuViewController"); 
-			CenterPanel = Storyboard.InstantiateViewController("PictureCollectionViewController");
-			//ShowLeftPanelAnimated(false);
+			LeftPanel = Storyboard.InstantiateViewController("SlideOutMenuViewController");
+			CenterPanel = Storyboard.InstantiateViewController("PictureCollectionViewController");;
+			
 		}
 
 		public override void ViewDidLoad()
