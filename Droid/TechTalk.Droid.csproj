@@ -92,6 +92,9 @@
     <Reference Include="Square.Picasso">
       <HintPath>..\packages\Square.Picasso.2.5.2.1\lib\MonoAndroid\Square.Picasso.dll</HintPath>
     </Reference>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>..\packages\Newtonsoft.Json.8.0.3\lib\portable-net40+sl5+wp80+win8+wpa81\Newtonsoft.Json.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\TechTalk.csproj">
@@ -130,6 +133,10 @@
     <Compile Include="Views\PictureView.cs" />
     <Compile Include="ClientSpecific\NavigationService.cs" />
     <Compile Include="Views\Fragments\GalleryFragment.cs" />
+    <Compile Include="ClientSpecific\GalleryService.cs" />
+    <Compile Include="Proxy\GalleryServiceProxy.cs" />
+    <Compile Include="Services\GalleryServiceService.cs" />
+    <Compile Include="ProxyBinders\GalleryServiceProxyBinder.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\AboutResources.txt" />
@@ -189,6 +196,10 @@
     <Folder Include="Proxy\" />
     <Folder Include="ProxyBinders\" />
     <Folder Include="EventArgs\" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidInterfaceDescription Include="ProxyInterfaces\IGalleryServiceProxy.aidl" />
+    <AndroidInterfaceDescription Include="ProxyInterfaces\IGalleryServiceCallbackProxy.aidl" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
   <Import Project="..\packages\Xamarin.Android.Support.Vector.Drawable.23.3.0\build\Xamarin.Android.Support.Vector.Drawable.targets" Condition="Exists('..\packages\Xamarin.Android.Support.Vector.Drawable.23.3.0\build\Xamarin.Android.Support.Vector.Drawable.targets')" />

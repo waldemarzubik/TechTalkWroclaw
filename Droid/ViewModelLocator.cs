@@ -12,7 +12,7 @@ namespace TechTalk.Droid
         {
             get
             {
-                return null;
+                return () => new GalleryServiceProxy(SimpleIoc.Default.GetInstance<IServiceConnectionBinder>());
             }
         }
 
@@ -28,6 +28,11 @@ namespace TechTalk.Droid
         {
             SimpleIoc.Default.Register<IActivityLifeTimeMonitor, ActivityLifeTimeMonitor>();
             SimpleIoc.Default.Register<ITransitionService, TransitionService>();
+            SimpleIoc.Default.Register<IServiceConnectionBinder, ServiceConnectionBinder>();
+
+
+            var binder = SimpleIoc.Default.GetInstance<IServiceConnectionBinder>();
+            binder.Register<MainView, GalleryServiceService>();
         }
     }
 }

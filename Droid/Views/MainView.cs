@@ -30,6 +30,10 @@ namespace TechTalk.Droid
             var fragmentTransaction = fragmentManager.BeginTransaction();
             fragmentTransaction.Replace(Resource.Id.navigationDrawer, System.Activator.CreateInstance<MainMenuFragment>());
             fragmentTransaction.CommitAllowingStateLoss();
+
+            fragmentTransaction = fragmentManager.BeginTransaction();
+            fragmentTransaction.Replace(Resource.Id.drawerContent, System.Activator.CreateInstance<GalleryFragment>());
+            fragmentTransaction.CommitAllowingStateLoss();
         }
 
         protected override void OnCreateToolbar()

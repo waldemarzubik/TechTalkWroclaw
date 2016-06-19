@@ -18,10 +18,8 @@ namespace TechTalk.Droid
     {
         private const int COLUMNS_COUNT = 3;
 
-
         private RecyclerView _imagesList;
         private int _itemSize;
-
 
         public RecyclerView ImagesList
         {
