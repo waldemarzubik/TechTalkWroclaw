@@ -5,7 +5,7 @@ using Com.Epam.Techtalk;
 
 namespace TechTalk.Droid
 {
-    [Service(Process = "com.epam.techtalk.background")]
+    [Service()]
     public class GalleryServiceService : Service
     {
         IGalleryServiceCallbackProxy _callback;
