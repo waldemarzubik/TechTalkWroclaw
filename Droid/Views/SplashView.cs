@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 using TechTalk.ViewModels;
 using TechTalk.Droid.Interfaces;
 using Microsoft.Practices.ServiceLocation;
+using Android.Content;
 
 namespace TechTalk.Droid.Views
 {
@@ -29,7 +30,11 @@ namespace TechTalk.Droid.Views
             Task.Run(async () =>
             {
                 await Task.Delay(1500);
-                NavigationService.NavigateTo<IMainViewModel>();
+                using (var intent = new Intent(this, typeof(MainView)))
+                {
+                    StartActivity(intent);
+                }
+                //NavigationService.NavigateTo<IMainViewModel>();
             });
         }
 
