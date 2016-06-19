@@ -61,10 +61,15 @@ namespace TechTalk.Droid
         {
             if (nameof(ViewModel.Images).Equals(e.PropertyName) && ViewModel.Images != null)
             {
-                _adapter = ViewModel.Images.GetRecyclerAdapter(BindViewHolder, Resource.Layout.Item_Picture, null);
+                _adapter = ViewModel.Images.GetRecyclerAdapter(BindViewHolder, Resource.Layout.Item_Picture, ItemClick);
                 _binding = this.SetBinding(() => _adapter.SelectedItem, () => ViewModel.SelectedItem, BindingMode.TwoWay);
                 ImagesList.SetAdapter(_adapter);
             }
+        }
+
+        private void ItemClick(int arg1, View oldView, int arg3, View newView)
+        {
+            TransitionService.SetTransitionInfo(new Tuple<View, string>(newView.FindViewById<ImageView>(Resource.Id.image), Resources.GetString(Resource.String.Picture)));
         }
 
         void BindViewHolder(CachingViewHolder arg1, Picture arg2, int arg3)

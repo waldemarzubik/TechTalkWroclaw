@@ -176,6 +176,7 @@
     <AndroidResource Include="Resources\layout\MenuHeader.axml" />
     <AndroidResource Include="Resources\layout\GalleryView.axml" />
     <AndroidResource Include="Resources\layout\Item_Picture.axml" />
+    <AndroidResource Include="Resources\values\TransitionNames.xml" />
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>

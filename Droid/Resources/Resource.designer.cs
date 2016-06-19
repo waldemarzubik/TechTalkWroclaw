@@ -2765,6 +2765,9 @@ namespace TechTalk.Droid
 			// aapt resource value: 0x7f0b0019
 			public const int Gallery = 2131427353;
 			
+			// aapt resource value: 0x7f0b001d
+			public const int Picture = 2131427357;
+			
 			// aapt resource value: 0x7f0b001c
 			public const int RushB = 2131427356;
 			
