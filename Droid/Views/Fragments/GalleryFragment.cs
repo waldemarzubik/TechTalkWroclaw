@@ -9,6 +9,7 @@ using Java.IO;
 using Square.Picasso;
 using TechTalk.DataModels;
 using TechTalk.ViewModels;
+using GalaSoft.MvvmLight.Ioc;
 
 namespace TechTalk.Droid.Views.Fragments
 {
@@ -16,6 +17,7 @@ namespace TechTalk.Droid.Views.Fragments
     {
         private const int COLUMNS_COUNT = 3;
 
+        private readonly IServiceConnectionBinder _serviceBinder;
         private ObservableRecyclerAdapter<Picture, CachingViewHolder> _adapter;
         private RecyclerView _imagesList;
         private Binding<Picture, Picture> _selectedItemBinding;
@@ -29,6 +31,7 @@ namespace TechTalk.Droid.Views.Fragments
 
         public GalleryFragment() : base(Resource.Layout.GalleryView)
         {
+            _serviceBinder = SimpleIoc.Default.GetInstance<IServiceConnectionBinder>();
         }
 
         public override void OnCreate(Bundle savedInstanceState)
@@ -36,6 +39,18 @@ namespace TechTalk.Droid.Views.Fragments
             ViewModel.PropertyChanged += ViewModel_PropertyChanged;
             _itemSize = Activity.WindowManager.DefaultDisplay.Width / COLUMNS_COUNT;
             base.OnCreate(savedInstanceState);
+        }
+
+        public override void OnStart()
+        {
+            base.OnStart();
+            _serviceBinder.Bind(Activity);
+        }
+
+        public override void OnStop()
+        {
+            base.OnStop();
+            _serviceBinder.Undbind(Activity);
         }
 
         public override void OnDestroy()

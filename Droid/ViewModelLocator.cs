@@ -8,13 +8,12 @@ using TechTalk.Droid.Views;
 using TechTalk.Interfaces;
 using TechTalk.ViewModels;
 using TechTalk.ViewModel;
-using TechTalk.Droid.Views.Fragments;
 
 namespace TechTalk.Droid
 {
     public class ViewModelLocator : ViewModelLocatorBase
     {
-        protected override Func<IGalleryService> GalleryServiceFunc => () => new GalleryService(ServiceLocator.Current.GetInstance<IActivityLifeTimeMonitor>());
+        protected override Func<IGalleryService> GalleryServiceFunc => () => new GalleryServiceProxy(ServiceLocator.Current.GetInstance<IServiceConnectionBinder>());
 
         private Dictionary<Type, Tuple<Type, int>> CustomMappings
         {
@@ -36,10 +35,15 @@ namespace TechTalk.Droid
 
         public ViewModelLocator()
         {
+            SimpleIoc.Default.Register<IServiceConnectionBinder, ServiceConnectionBinder>();
             SimpleIoc.Default.Register<IActivityLifeTimeMonitor, ActivityLifeTimeMonitor>();
             SimpleIoc.Default.Register<ITransitionService, TransitionService>();
             SimpleIoc.Default.Register<INavigationDrawer, NavigationDrawerService>();
             SimpleIoc.Default.Register<IParamsHolder, ParamsHolder>();
+
+
+            var binder = SimpleIoc.Default.GetInstance<IServiceConnectionBinder>();
+            binder.Register<MainView, GalleryServiceService>();
         }
     }
 }
