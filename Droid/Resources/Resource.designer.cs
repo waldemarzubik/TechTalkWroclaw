@@ -79,6 +79,24 @@ namespace TechTalk.Droid
 			// aapt resource value: 0x7f05000f
 			public const int design_snackbar_out = 2131034127;
 			
+			// aapt resource value: 0x7f050010
+			public const int fab_scale_down = 2131034128;
+			
+			// aapt resource value: 0x7f050011
+			public const int fab_scale_up = 2131034129;
+			
+			// aapt resource value: 0x7f050012
+			public const int fab_slide_in_from_left = 2131034130;
+			
+			// aapt resource value: 0x7f050013
+			public const int fab_slide_in_from_right = 2131034131;
+			
+			// aapt resource value: 0x7f050014
+			public const int fab_slide_out_to_left = 2131034132;
+			
+			// aapt resource value: 0x7f050015
+			public const int fab_slide_out_to_right = 2131034133;
+			
 			static Animation()
 			{
 				global::Android.Runtime.ResourceIdManager.UpdateIdValues();
@@ -458,6 +476,66 @@ namespace TechTalk.Droid
 			// aapt resource value: 0x7f01001e
 			public const int fabSize = 2130771998;
 			
+			// aapt resource value: 0x7f01011c
+			public const int fab_colorDisabled = 2130772252;
+			
+			// aapt resource value: 0x7f01011a
+			public const int fab_colorNormal = 2130772250;
+			
+			// aapt resource value: 0x7f01011b
+			public const int fab_colorPressed = 2130772251;
+			
+			// aapt resource value: 0x7f01011d
+			public const int fab_colorRipple = 2130772253;
+			
+			// aapt resource value: 0x7f010127
+			public const int fab_elevationCompat = 2130772263;
+			
+			// aapt resource value: 0x7f010125
+			public const int fab_hideAnimation = 2130772261;
+			
+			// aapt resource value: 0x7f010126
+			public const int fab_label = 2130772262;
+			
+			// aapt resource value: 0x7f01012c
+			public const int fab_progress = 2130772268;
+			
+			// aapt resource value: 0x7f010129
+			public const int fab_progress_backgroundColor = 2130772265;
+			
+			// aapt resource value: 0x7f010128
+			public const int fab_progress_color = 2130772264;
+			
+			// aapt resource value: 0x7f01012a
+			public const int fab_progress_indeterminate = 2130772266;
+			
+			// aapt resource value: 0x7f01012b
+			public const int fab_progress_max = 2130772267;
+			
+			// aapt resource value: 0x7f01012d
+			public const int fab_progress_showBackground = 2130772269;
+			
+			// aapt resource value: 0x7f01011f
+			public const int fab_shadowColor = 2130772255;
+			
+			// aapt resource value: 0x7f010120
+			public const int fab_shadowRadius = 2130772256;
+			
+			// aapt resource value: 0x7f010121
+			public const int fab_shadowXOffset = 2130772257;
+			
+			// aapt resource value: 0x7f010122
+			public const int fab_shadowYOffset = 2130772258;
+			
+			// aapt resource value: 0x7f010124
+			public const int fab_showAnimation = 2130772260;
+			
+			// aapt resource value: 0x7f01011e
+			public const int fab_showShadow = 2130772254;
+			
+			// aapt resource value: 0x7f010123
+			public const int fab_size = 2130772259;
+			
 			// aapt resource value: 0x7f010022
 			public const int foregroundInsidePadding = 2130772002;
 			
@@ -607,6 +685,123 @@ namespace TechTalk.Droid
 			
 			// aapt resource value: 0x7f010023
 			public const int menu = 2130772003;
+			
+			// aapt resource value: 0x7f010141
+			public const int menu_animationDelayPerItem = 2130772289;
+			
+			// aapt resource value: 0x7f010151
+			public const int menu_backgroundColor = 2130772305;
+			
+			// aapt resource value: 0x7f01012f
+			public const int menu_buttonSpacing = 2130772271;
+			
+			// aapt resource value: 0x7f010142
+			public const int menu_buttonToggleAnimation = 2130772290;
+			
+			// aapt resource value: 0x7f01014d
+			public const int menu_colorNormal = 2130772301;
+			
+			// aapt resource value: 0x7f01014e
+			public const int menu_colorPressed = 2130772302;
+			
+			// aapt resource value: 0x7f01014f
+			public const int menu_colorRipple = 2130772303;
+			
+			// aapt resource value: 0x7f010154
+			public const int menu_fab_hide_animation = 2130772308;
+			
+			// aapt resource value: 0x7f010152
+			public const int menu_fab_label = 2130772306;
+			
+			// aapt resource value: 0x7f010153
+			public const int menu_fab_show_animation = 2130772307;
+			
+			// aapt resource value: 0x7f010146
+			public const int menu_fab_size = 2130772294;
+			
+			// aapt resource value: 0x7f010140
+			public const int menu_icon = 2130772288;
+			
+			// aapt resource value: 0x7f01013c
+			public const int menu_labels_colorNormal = 2130772284;
+			
+			// aapt resource value: 0x7f01013d
+			public const int menu_labels_colorPressed = 2130772285;
+			
+			// aapt resource value: 0x7f01013e
+			public const int menu_labels_colorRipple = 2130772286;
+			
+			// aapt resource value: 0x7f01013a
+			public const int menu_labels_cornerRadius = 2130772282;
+			
+			// aapt resource value: 0x7f010148
+			public const int menu_labels_customFont = 2130772296;
+			
+			// aapt resource value: 0x7f010144
+			public const int menu_labels_ellipsize = 2130772292;
+			
+			// aapt resource value: 0x7f010132
+			public const int menu_labels_hideAnimation = 2130772274;
+			
+			// aapt resource value: 0x7f010130
+			public const int menu_labels_margin = 2130772272;
+			
+			// aapt resource value: 0x7f010145
+			public const int menu_labels_maxLines = 2130772293;
+			
+			// aapt resource value: 0x7f010137
+			public const int menu_labels_padding = 2130772279;
+			
+			// aapt resource value: 0x7f010136
+			public const int menu_labels_paddingBottom = 2130772278;
+			
+			// aapt resource value: 0x7f010134
+			public const int menu_labels_paddingLeft = 2130772276;
+			
+			// aapt resource value: 0x7f010135
+			public const int menu_labels_paddingRight = 2130772277;
+			
+			// aapt resource value: 0x7f010133
+			public const int menu_labels_paddingTop = 2130772275;
+			
+			// aapt resource value: 0x7f01013f
+			public const int menu_labels_position = 2130772287;
+			
+			// aapt resource value: 0x7f010131
+			public const int menu_labels_showAnimation = 2130772273;
+			
+			// aapt resource value: 0x7f01013b
+			public const int menu_labels_showShadow = 2130772283;
+			
+			// aapt resource value: 0x7f010143
+			public const int menu_labels_singleLine = 2130772291;
+			
+			// aapt resource value: 0x7f010147
+			public const int menu_labels_style = 2130772295;
+			
+			// aapt resource value: 0x7f010138
+			public const int menu_labels_textColor = 2130772280;
+			
+			// aapt resource value: 0x7f010139
+			public const int menu_labels_textSize = 2130772281;
+			
+			// aapt resource value: 0x7f010150
+			public const int menu_openDirection = 2130772304;
+			
+			// aapt resource value: 0x7f010149
+			public const int menu_shadowColor = 2130772297;
+			
+			// aapt resource value: 0x7f01014a
+			public const int menu_shadowRadius = 2130772298;
+			
+			// aapt resource value: 0x7f01014b
+			public const int menu_shadowXOffset = 2130772299;
+			
+			// aapt resource value: 0x7f01014c
+			public const int menu_shadowYOffset = 2130772300;
+			
+			// aapt resource value: 0x7f01012e
+			public const int menu_showShadow = 2130772270;
 			
 			// aapt resource value: 0x7f01006a
 			public const int multiChoiceItemLayout = 2130772074;
@@ -1550,6 +1745,12 @@ namespace TechTalk.Droid
 			// aapt resource value: 0x7f070064
 			public const int disabled_alpha_material_light = 2131165284;
 			
+			// aapt resource value: 0x7f07006b
+			public const int fab_size_mini = 2131165291;
+			
+			// aapt resource value: 0x7f07006c
+			public const int fab_size_normal = 2131165292;
+			
 			// aapt resource value: 0x7f070065
 			public const int highlight_alpha_material_colored = 2131165285;
 			
@@ -1567,6 +1768,9 @@ namespace TechTalk.Droid
 			
 			// aapt resource value: 0x7f07001f
 			public const int item_touch_helper_swipe_escape_velocity = 2131165215;
+			
+			// aapt resource value: 0x7f07006d
+			public const int labels_text_size = 2131165293;
 			
 			// aapt resource value: 0x7f070068
 			public const int notification_large_icon_height = 2131165288;
@@ -1590,8 +1794,8 @@ namespace TechTalk.Droid
 		public partial class Drawable
 		{
 			
-			// aapt resource value: 0x7f02005a
-			public const int SplashBackground = 2130837594;
+			// aapt resource value: 0x7f02005b
+			public const int SplashBackground = 2130837595;
 			
 			// aapt resource value: 0x7f020000
 			public const int abc_ab_share_pack_mtrl_alpha = 2130837504;
@@ -1825,43 +2029,46 @@ namespace TechTalk.Droid
 			public const int design_snackbar_background = 2130837580;
 			
 			// aapt resource value: 0x7f02004d
-			public const int ic_about = 2130837581;
+			public const int fab_add = 2130837581;
 			
 			// aapt resource value: 0x7f02004e
-			public const int ic_blur = 2130837582;
+			public const int ic_about = 2130837582;
 			
 			// aapt resource value: 0x7f02004f
-			public const int ic_close = 2130837583;
+			public const int ic_blur = 2130837583;
 			
 			// aapt resource value: 0x7f020050
-			public const int ic_cool = 2130837584;
+			public const int ic_close = 2130837584;
 			
 			// aapt resource value: 0x7f020051
-			public const int ic_edit = 2130837585;
+			public const int ic_cool = 2130837585;
 			
 			// aapt resource value: 0x7f020052
-			public const int ic_gallery = 2130837586;
+			public const int ic_edit = 2130837586;
 			
 			// aapt resource value: 0x7f020053
-			public const int ic_grayscale = 2130837587;
+			public const int ic_gallery = 2130837587;
 			
 			// aapt resource value: 0x7f020054
-			public const int ic_noob = 2130837588;
+			public const int ic_grayscale = 2130837588;
 			
 			// aapt resource value: 0x7f020055
-			public const int ic_rotate = 2130837589;
+			public const int ic_noob = 2130837589;
 			
 			// aapt resource value: 0x7f020056
-			public const int ic_rush = 2130837590;
+			public const int ic_rotate = 2130837590;
 			
 			// aapt resource value: 0x7f020057
-			public const int logo = 2130837591;
-			
-			// aapt resource value: 0x7f020059
-			public const int notification_template_icon_bg = 2130837593;
+			public const int ic_rush = 2130837591;
 			
 			// aapt resource value: 0x7f020058
-			public const int splash = 2130837592;
+			public const int logo = 2130837592;
+			
+			// aapt resource value: 0x7f02005a
+			public const int notification_template_icon_bg = 2130837594;
+			
+			// aapt resource value: 0x7f020059
+			public const int splash = 2130837593;
 			
 			static Drawable()
 			{
@@ -1876,35 +2083,35 @@ namespace TechTalk.Droid
 		public partial class Id
 		{
 			
-			// aapt resource value: 0x7f0a0072
-			public const int action0 = 2131361906;
+			// aapt resource value: 0x7f0a0075
+			public const int action0 = 2131361909;
 			
-			// aapt resource value: 0x7f0a005a
-			public const int action_bar = 2131361882;
+			// aapt resource value: 0x7f0a005d
+			public const int action_bar = 2131361885;
 			
 			// aapt resource value: 0x7f0a0002
 			public const int action_bar_activity_content = 2131361794;
 			
-			// aapt resource value: 0x7f0a0059
-			public const int action_bar_container = 2131361881;
+			// aapt resource value: 0x7f0a005c
+			public const int action_bar_container = 2131361884;
 			
-			// aapt resource value: 0x7f0a0055
-			public const int action_bar_root = 2131361877;
+			// aapt resource value: 0x7f0a0058
+			public const int action_bar_root = 2131361880;
 			
 			// aapt resource value: 0x7f0a0003
 			public const int action_bar_spinner = 2131361795;
 			
-			// aapt resource value: 0x7f0a003b
-			public const int action_bar_subtitle = 2131361851;
+			// aapt resource value: 0x7f0a003e
+			public const int action_bar_subtitle = 2131361854;
 			
-			// aapt resource value: 0x7f0a003a
-			public const int action_bar_title = 2131361850;
+			// aapt resource value: 0x7f0a003d
+			public const int action_bar_title = 2131361853;
 			
-			// aapt resource value: 0x7f0a005b
-			public const int action_context_bar = 2131361883;
+			// aapt resource value: 0x7f0a005e
+			public const int action_context_bar = 2131361886;
 			
-			// aapt resource value: 0x7f0a0076
-			public const int action_divider = 2131361910;
+			// aapt resource value: 0x7f0a0079
+			public const int action_divider = 2131361913;
 			
 			// aapt resource value: 0x7f0a0004
 			public const int action_menu_divider = 2131361796;
@@ -1912,197 +2119,206 @@ namespace TechTalk.Droid
 			// aapt resource value: 0x7f0a0005
 			public const int action_menu_presenter = 2131361797;
 			
-			// aapt resource value: 0x7f0a0057
-			public const int action_mode_bar = 2131361879;
+			// aapt resource value: 0x7f0a005a
+			public const int action_mode_bar = 2131361882;
 			
-			// aapt resource value: 0x7f0a0056
-			public const int action_mode_bar_stub = 2131361878;
+			// aapt resource value: 0x7f0a0059
+			public const int action_mode_bar_stub = 2131361881;
 			
-			// aapt resource value: 0x7f0a003c
-			public const int action_mode_close_button = 2131361852;
-			
-			// aapt resource value: 0x7f0a003d
-			public const int activity_chooser_view_content = 2131361853;
-			
-			// aapt resource value: 0x7f0a0049
-			public const int alertTitle = 2131361865;
-			
-			// aapt resource value: 0x7f0a0035
-			public const int always = 2131361845;
-			
-			// aapt resource value: 0x7f0a0033
-			public const int beginning = 2131361843;
-			
-			// aapt resource value: 0x7f0a0013
-			public const int bottom = 2131361811;
-			
-			// aapt resource value: 0x7f0a0044
-			public const int buttonPanel = 2131361860;
-			
-			// aapt resource value: 0x7f0a0073
-			public const int cancel_action = 2131361907;
-			
-			// aapt resource value: 0x7f0a0014
-			public const int center = 2131361812;
-			
-			// aapt resource value: 0x7f0a0015
-			public const int center_horizontal = 2131361813;
-			
-			// aapt resource value: 0x7f0a0016
-			public const int center_vertical = 2131361814;
-			
-			// aapt resource value: 0x7f0a0052
-			public const int checkbox = 2131361874;
-			
-			// aapt resource value: 0x7f0a0079
-			public const int chronometer = 2131361913;
-			
-			// aapt resource value: 0x7f0a001d
-			public const int clip_horizontal = 2131361821;
-			
-			// aapt resource value: 0x7f0a001e
-			public const int clip_vertical = 2131361822;
-			
-			// aapt resource value: 0x7f0a0036
-			public const int collapseActionView = 2131361846;
-			
-			// aapt resource value: 0x7f0a004a
-			public const int contentPanel = 2131361866;
-			
-			// aapt resource value: 0x7f0a0050
-			public const int custom = 2131361872;
-			
-			// aapt resource value: 0x7f0a004f
-			public const int customPanel = 2131361871;
-			
-			// aapt resource value: 0x7f0a0058
-			public const int decor_content_parent = 2131361880;
+			// aapt resource value: 0x7f0a003f
+			public const int action_mode_close_button = 2131361855;
 			
 			// aapt resource value: 0x7f0a0040
-			public const int default_activity_button = 2131361856;
+			public const int activity_chooser_view_content = 2131361856;
 			
-			// aapt resource value: 0x7f0a006a
-			public const int design_bottom_sheet = 2131361898;
+			// aapt resource value: 0x7f0a004c
+			public const int alertTitle = 2131361868;
 			
-			// aapt resource value: 0x7f0a0071
-			public const int design_menu_item_action_area = 2131361905;
+			// aapt resource value: 0x7f0a0036
+			public const int always = 2131361846;
 			
-			// aapt resource value: 0x7f0a0070
-			public const int design_menu_item_action_area_stub = 2131361904;
+			// aapt resource value: 0x7f0a0034
+			public const int beginning = 2131361844;
 			
-			// aapt resource value: 0x7f0a006f
-			public const int design_menu_item_text = 2131361903;
+			// aapt resource value: 0x7f0a0014
+			public const int bottom = 2131361812;
 			
-			// aapt resource value: 0x7f0a006e
-			public const int design_navigation_view = 2131361902;
+			// aapt resource value: 0x7f0a0047
+			public const int buttonPanel = 2131361863;
 			
-			// aapt resource value: 0x7f0a0027
-			public const int disableHome = 2131361831;
+			// aapt resource value: 0x7f0a0076
+			public const int cancel_action = 2131361910;
 			
-			// aapt resource value: 0x7f0a005c
-			public const int edit_query = 2131361884;
+			// aapt resource value: 0x7f0a0015
+			public const int center = 2131361813;
+			
+			// aapt resource value: 0x7f0a0016
+			public const int center_horizontal = 2131361814;
 			
 			// aapt resource value: 0x7f0a0017
-			public const int end = 2131361815;
+			public const int center_vertical = 2131361815;
 			
-			// aapt resource value: 0x7f0a007e
-			public const int end_padder = 2131361918;
+			// aapt resource value: 0x7f0a0055
+			public const int checkbox = 2131361877;
 			
-			// aapt resource value: 0x7f0a000b
-			public const int enterAlways = 2131361803;
+			// aapt resource value: 0x7f0a007c
+			public const int chronometer = 2131361916;
 			
-			// aapt resource value: 0x7f0a000c
-			public const int enterAlwaysCollapsed = 2131361804;
-			
-			// aapt resource value: 0x7f0a000d
-			public const int exitUntilCollapsed = 2131361805;
-			
-			// aapt resource value: 0x7f0a003e
-			public const int expand_activities_button = 2131361854;
-			
-			// aapt resource value: 0x7f0a0051
-			public const int expanded_menu = 2131361873;
+			// aapt resource value: 0x7f0a001e
+			public const int clip_horizontal = 2131361822;
 			
 			// aapt resource value: 0x7f0a001f
-			public const int fill = 2131361823;
+			public const int clip_vertical = 2131361823;
 			
-			// aapt resource value: 0x7f0a0020
-			public const int fill_horizontal = 2131361824;
+			// aapt resource value: 0x7f0a0037
+			public const int collapseActionView = 2131361847;
+			
+			// aapt resource value: 0x7f0a004d
+			public const int contentPanel = 2131361869;
+			
+			// aapt resource value: 0x7f0a0053
+			public const int custom = 2131361875;
+			
+			// aapt resource value: 0x7f0a0052
+			public const int customPanel = 2131361874;
+			
+			// aapt resource value: 0x7f0a005b
+			public const int decor_content_parent = 2131361883;
+			
+			// aapt resource value: 0x7f0a0043
+			public const int default_activity_button = 2131361859;
+			
+			// aapt resource value: 0x7f0a006d
+			public const int design_bottom_sheet = 2131361901;
+			
+			// aapt resource value: 0x7f0a0074
+			public const int design_menu_item_action_area = 2131361908;
+			
+			// aapt resource value: 0x7f0a0073
+			public const int design_menu_item_action_area_stub = 2131361907;
+			
+			// aapt resource value: 0x7f0a0072
+			public const int design_menu_item_text = 2131361906;
+			
+			// aapt resource value: 0x7f0a0071
+			public const int design_navigation_view = 2131361905;
+			
+			// aapt resource value: 0x7f0a0028
+			public const int disableHome = 2131361832;
+			
+			// aapt resource value: 0x7f0a003c
+			public const int down = 2131361852;
+			
+			// aapt resource value: 0x7f0a005f
+			public const int edit_query = 2131361887;
 			
 			// aapt resource value: 0x7f0a0018
-			public const int fill_vertical = 2131361816;
+			public const int end = 2131361816;
 			
-			// aapt resource value: 0x7f0a0023
-			public const int @fixed = 2131361827;
+			// aapt resource value: 0x7f0a0081
+			public const int end_padder = 2131361921;
+			
+			// aapt resource value: 0x7f0a000c
+			public const int enterAlways = 2131361804;
+			
+			// aapt resource value: 0x7f0a000d
+			public const int enterAlwaysCollapsed = 2131361805;
+			
+			// aapt resource value: 0x7f0a000e
+			public const int exitUntilCollapsed = 2131361806;
+			
+			// aapt resource value: 0x7f0a0041
+			public const int expand_activities_button = 2131361857;
+			
+			// aapt resource value: 0x7f0a0054
+			public const int expanded_menu = 2131361876;
+			
+			// aapt resource value: 0x7f0a000b
+			public const int fab_label = 2131361803;
+			
+			// aapt resource value: 0x7f0a0020
+			public const int fill = 2131361824;
+			
+			// aapt resource value: 0x7f0a0021
+			public const int fill_horizontal = 2131361825;
+			
+			// aapt resource value: 0x7f0a0019
+			public const int fill_vertical = 2131361817;
+			
+			// aapt resource value: 0x7f0a0024
+			public const int @fixed = 2131361828;
 			
 			// aapt resource value: 0x7f0a0006
 			public const int home = 2131361798;
 			
-			// aapt resource value: 0x7f0a0028
-			public const int homeAsUp = 2131361832;
+			// aapt resource value: 0x7f0a0029
+			public const int homeAsUp = 2131361833;
+			
+			// aapt resource value: 0x7f0a0045
+			public const int icon = 2131361861;
+			
+			// aapt resource value: 0x7f0a0038
+			public const int ifRoom = 2131361848;
 			
 			// aapt resource value: 0x7f0a0042
-			public const int icon = 2131361858;
+			public const int image = 2131361858;
 			
-			// aapt resource value: 0x7f0a0037
-			public const int ifRoom = 2131361847;
-			
-			// aapt resource value: 0x7f0a003f
-			public const int image = 2131361855;
-			
-			// aapt resource value: 0x7f0a007d
-			public const int info = 2131361917;
+			// aapt resource value: 0x7f0a0080
+			public const int info = 2131361920;
 			
 			// aapt resource value: 0x7f0a0001
 			public const int item_touch_helper_previous_elevation = 2131361793;
 			
-			// aapt resource value: 0x7f0a0019
-			public const int left = 2131361817;
+			// aapt resource value: 0x7f0a001a
+			public const int left = 2131361818;
 			
-			// aapt resource value: 0x7f0a0077
-			public const int line1 = 2131361911;
+			// aapt resource value: 0x7f0a007a
+			public const int line1 = 2131361914;
 			
-			// aapt resource value: 0x7f0a007b
-			public const int line3 = 2131361915;
+			// aapt resource value: 0x7f0a007e
+			public const int line3 = 2131361918;
 			
-			// aapt resource value: 0x7f0a0025
-			public const int listMode = 2131361829;
+			// aapt resource value: 0x7f0a0026
+			public const int listMode = 2131361830;
 			
-			// aapt resource value: 0x7f0a0041
-			public const int list_item = 2131361857;
+			// aapt resource value: 0x7f0a0044
+			public const int list_item = 2131361860;
 			
-			// aapt resource value: 0x7f0a0075
-			public const int media_actions = 2131361909;
+			// aapt resource value: 0x7f0a003b
+			public const int marquee = 2131361851;
 			
-			// aapt resource value: 0x7f0a0034
-			public const int middle = 2131361844;
+			// aapt resource value: 0x7f0a0078
+			public const int media_actions = 2131361912;
 			
-			// aapt resource value: 0x7f0a0021
-			public const int mini = 2131361825;
-			
-			// aapt resource value: 0x7f0a002e
-			public const int multiply = 2131361838;
-			
-			// aapt resource value: 0x7f0a006d
-			public const int navigation_header_container = 2131361901;
-			
-			// aapt resource value: 0x7f0a0038
-			public const int never = 2131361848;
-			
-			// aapt resource value: 0x7f0a0010
-			public const int none = 2131361808;
+			// aapt resource value: 0x7f0a0035
+			public const int middle = 2131361845;
 			
 			// aapt resource value: 0x7f0a0022
-			public const int normal = 2131361826;
+			public const int mini = 2131361826;
+			
+			// aapt resource value: 0x7f0a002f
+			public const int multiply = 2131361839;
+			
+			// aapt resource value: 0x7f0a0070
+			public const int navigation_header_container = 2131361904;
+			
+			// aapt resource value: 0x7f0a0039
+			public const int never = 2131361849;
 			
 			// aapt resource value: 0x7f0a0011
-			public const int parallax = 2131361809;
+			public const int none = 2131361809;
 			
-			// aapt resource value: 0x7f0a0046
-			public const int parentPanel = 2131361862;
+			// aapt resource value: 0x7f0a0023
+			public const int normal = 2131361827;
 			
 			// aapt resource value: 0x7f0a0012
-			public const int pin = 2131361810;
+			public const int parallax = 2131361810;
+			
+			// aapt resource value: 0x7f0a0049
+			public const int parentPanel = 2131361865;
+			
+			// aapt resource value: 0x7f0a0013
+			public const int pin = 2131361811;
 			
 			// aapt resource value: 0x7f0a0007
 			public const int progress_circular = 2131361799;
@@ -2110,152 +2326,152 @@ namespace TechTalk.Droid
 			// aapt resource value: 0x7f0a0008
 			public const int progress_horizontal = 2131361800;
 			
-			// aapt resource value: 0x7f0a0054
-			public const int radio = 2131361876;
+			// aapt resource value: 0x7f0a0057
+			public const int radio = 2131361879;
 			
-			// aapt resource value: 0x7f0a001a
-			public const int right = 2131361818;
+			// aapt resource value: 0x7f0a001b
+			public const int right = 2131361819;
 			
-			// aapt resource value: 0x7f0a002f
-			public const int screen = 2131361839;
-			
-			// aapt resource value: 0x7f0a000e
-			public const int scroll = 2131361806;
-			
-			// aapt resource value: 0x7f0a004e
-			public const int scrollIndicatorDown = 2131361870;
-			
-			// aapt resource value: 0x7f0a004b
-			public const int scrollIndicatorUp = 2131361867;
-			
-			// aapt resource value: 0x7f0a004c
-			public const int scrollView = 2131361868;
-			
-			// aapt resource value: 0x7f0a0024
-			public const int scrollable = 2131361828;
-			
-			// aapt resource value: 0x7f0a005e
-			public const int search_badge = 2131361886;
-			
-			// aapt resource value: 0x7f0a005d
-			public const int search_bar = 2131361885;
-			
-			// aapt resource value: 0x7f0a005f
-			public const int search_button = 2131361887;
-			
-			// aapt resource value: 0x7f0a0064
-			public const int search_close_btn = 2131361892;
-			
-			// aapt resource value: 0x7f0a0060
-			public const int search_edit_frame = 2131361888;
-			
-			// aapt resource value: 0x7f0a0066
-			public const int search_go_btn = 2131361894;
-			
-			// aapt resource value: 0x7f0a0061
-			public const int search_mag_icon = 2131361889;
-			
-			// aapt resource value: 0x7f0a0062
-			public const int search_plate = 2131361890;
-			
-			// aapt resource value: 0x7f0a0063
-			public const int search_src_text = 2131361891;
-			
-			// aapt resource value: 0x7f0a0067
-			public const int search_voice_btn = 2131361895;
-			
-			// aapt resource value: 0x7f0a0068
-			public const int select_dialog_listview = 2131361896;
-			
-			// aapt resource value: 0x7f0a0053
-			public const int shortcut = 2131361875;
-			
-			// aapt resource value: 0x7f0a0029
-			public const int showCustom = 2131361833;
-			
-			// aapt resource value: 0x7f0a002a
-			public const int showHome = 2131361834;
-			
-			// aapt resource value: 0x7f0a002b
-			public const int showTitle = 2131361835;
-			
-			// aapt resource value: 0x7f0a006c
-			public const int snackbar_action = 2131361900;
-			
-			// aapt resource value: 0x7f0a006b
-			public const int snackbar_text = 2131361899;
+			// aapt resource value: 0x7f0a0030
+			public const int screen = 2131361840;
 			
 			// aapt resource value: 0x7f0a000f
-			public const int snap = 2131361807;
+			public const int scroll = 2131361807;
 			
-			// aapt resource value: 0x7f0a0045
-			public const int spacer = 2131361861;
+			// aapt resource value: 0x7f0a0051
+			public const int scrollIndicatorDown = 2131361873;
+			
+			// aapt resource value: 0x7f0a004e
+			public const int scrollIndicatorUp = 2131361870;
+			
+			// aapt resource value: 0x7f0a004f
+			public const int scrollView = 2131361871;
+			
+			// aapt resource value: 0x7f0a0025
+			public const int scrollable = 2131361829;
+			
+			// aapt resource value: 0x7f0a0061
+			public const int search_badge = 2131361889;
+			
+			// aapt resource value: 0x7f0a0060
+			public const int search_bar = 2131361888;
+			
+			// aapt resource value: 0x7f0a0062
+			public const int search_button = 2131361890;
+			
+			// aapt resource value: 0x7f0a0067
+			public const int search_close_btn = 2131361895;
+			
+			// aapt resource value: 0x7f0a0063
+			public const int search_edit_frame = 2131361891;
+			
+			// aapt resource value: 0x7f0a0069
+			public const int search_go_btn = 2131361897;
+			
+			// aapt resource value: 0x7f0a0064
+			public const int search_mag_icon = 2131361892;
+			
+			// aapt resource value: 0x7f0a0065
+			public const int search_plate = 2131361893;
+			
+			// aapt resource value: 0x7f0a0066
+			public const int search_src_text = 2131361894;
+			
+			// aapt resource value: 0x7f0a006a
+			public const int search_voice_btn = 2131361898;
+			
+			// aapt resource value: 0x7f0a006b
+			public const int select_dialog_listview = 2131361899;
+			
+			// aapt resource value: 0x7f0a0056
+			public const int shortcut = 2131361878;
+			
+			// aapt resource value: 0x7f0a002a
+			public const int showCustom = 2131361834;
+			
+			// aapt resource value: 0x7f0a002b
+			public const int showHome = 2131361835;
+			
+			// aapt resource value: 0x7f0a002c
+			public const int showTitle = 2131361836;
+			
+			// aapt resource value: 0x7f0a006f
+			public const int snackbar_action = 2131361903;
+			
+			// aapt resource value: 0x7f0a006e
+			public const int snackbar_text = 2131361902;
+			
+			// aapt resource value: 0x7f0a0010
+			public const int snap = 2131361808;
+			
+			// aapt resource value: 0x7f0a0048
+			public const int spacer = 2131361864;
 			
 			// aapt resource value: 0x7f0a0009
 			public const int split_action_bar = 2131361801;
 			
-			// aapt resource value: 0x7f0a0030
-			public const int src_atop = 2131361840;
-			
 			// aapt resource value: 0x7f0a0031
-			public const int src_in = 2131361841;
+			public const int src_atop = 2131361841;
 			
 			// aapt resource value: 0x7f0a0032
-			public const int src_over = 2131361842;
+			public const int src_in = 2131361842;
 			
-			// aapt resource value: 0x7f0a001b
-			public const int start = 2131361819;
-			
-			// aapt resource value: 0x7f0a0074
-			public const int status_bar_latest_event_content = 2131361908;
-			
-			// aapt resource value: 0x7f0a0065
-			public const int submit_area = 2131361893;
-			
-			// aapt resource value: 0x7f0a0026
-			public const int tabMode = 2131361830;
-			
-			// aapt resource value: 0x7f0a007c
-			public const int text = 2131361916;
-			
-			// aapt resource value: 0x7f0a007a
-			public const int text2 = 2131361914;
-			
-			// aapt resource value: 0x7f0a004d
-			public const int textSpacerNoButtons = 2131361869;
-			
-			// aapt resource value: 0x7f0a0078
-			public const int time = 2131361912;
-			
-			// aapt resource value: 0x7f0a0043
-			public const int title = 2131361859;
-			
-			// aapt resource value: 0x7f0a0048
-			public const int title_template = 2131361864;
+			// aapt resource value: 0x7f0a0033
+			public const int src_over = 2131361843;
 			
 			// aapt resource value: 0x7f0a001c
-			public const int top = 2131361820;
+			public const int start = 2131361820;
 			
-			// aapt resource value: 0x7f0a0047
-			public const int topPanel = 2131361863;
+			// aapt resource value: 0x7f0a0077
+			public const int status_bar_latest_event_content = 2131361911;
 			
-			// aapt resource value: 0x7f0a0069
-			public const int touch_outside = 2131361897;
+			// aapt resource value: 0x7f0a0068
+			public const int submit_area = 2131361896;
+			
+			// aapt resource value: 0x7f0a0027
+			public const int tabMode = 2131361831;
+			
+			// aapt resource value: 0x7f0a007f
+			public const int text = 2131361919;
+			
+			// aapt resource value: 0x7f0a007d
+			public const int text2 = 2131361917;
+			
+			// aapt resource value: 0x7f0a0050
+			public const int textSpacerNoButtons = 2131361872;
+			
+			// aapt resource value: 0x7f0a007b
+			public const int time = 2131361915;
+			
+			// aapt resource value: 0x7f0a0046
+			public const int title = 2131361862;
+			
+			// aapt resource value: 0x7f0a004b
+			public const int title_template = 2131361867;
+			
+			// aapt resource value: 0x7f0a001d
+			public const int top = 2131361821;
+			
+			// aapt resource value: 0x7f0a004a
+			public const int topPanel = 2131361866;
+			
+			// aapt resource value: 0x7f0a006c
+			public const int touch_outside = 2131361900;
 			
 			// aapt resource value: 0x7f0a000a
 			public const int up = 2131361802;
 			
-			// aapt resource value: 0x7f0a002c
-			public const int useLogo = 2131361836;
+			// aapt resource value: 0x7f0a002d
+			public const int useLogo = 2131361837;
 			
 			// aapt resource value: 0x7f0a0000
 			public const int view_offset_helper = 2131361792;
 			
-			// aapt resource value: 0x7f0a0039
-			public const int withText = 2131361849;
+			// aapt resource value: 0x7f0a003a
+			public const int withText = 2131361850;
 			
-			// aapt resource value: 0x7f0a002d
-			public const int wrap_content = 2131361837;
+			// aapt resource value: 0x7f0a002e
+			public const int wrap_content = 2131361838;
 			
 			static Id()
 			{
@@ -4518,7 +4734,27 @@ namespace TechTalk.Droid
 					2130772001,
 					2130772067,
 					2130772248,
-					2130772249};
+					2130772249,
+					2130772250,
+					2130772251,
+					2130772252,
+					2130772253,
+					2130772254,
+					2130772255,
+					2130772256,
+					2130772257,
+					2130772258,
+					2130772259,
+					2130772260,
+					2130772261,
+					2130772262,
+					2130772263,
+					2130772264,
+					2130772265,
+					2130772266,
+					2130772267,
+					2130772268,
+					2130772269};
 			
 			// aapt resource value: 6
 			public const int FloatingActionButton_backgroundTint = 6;
@@ -4535,6 +4771,66 @@ namespace TechTalk.Droid
 			// aapt resource value: 1
 			public const int FloatingActionButton_fabSize = 1;
 			
+			// aapt resource value: 10
+			public const int FloatingActionButton_fab_colorDisabled = 10;
+			
+			// aapt resource value: 8
+			public const int FloatingActionButton_fab_colorNormal = 8;
+			
+			// aapt resource value: 9
+			public const int FloatingActionButton_fab_colorPressed = 9;
+			
+			// aapt resource value: 11
+			public const int FloatingActionButton_fab_colorRipple = 11;
+			
+			// aapt resource value: 21
+			public const int FloatingActionButton_fab_elevationCompat = 21;
+			
+			// aapt resource value: 19
+			public const int FloatingActionButton_fab_hideAnimation = 19;
+			
+			// aapt resource value: 20
+			public const int FloatingActionButton_fab_label = 20;
+			
+			// aapt resource value: 26
+			public const int FloatingActionButton_fab_progress = 26;
+			
+			// aapt resource value: 23
+			public const int FloatingActionButton_fab_progress_backgroundColor = 23;
+			
+			// aapt resource value: 22
+			public const int FloatingActionButton_fab_progress_color = 22;
+			
+			// aapt resource value: 24
+			public const int FloatingActionButton_fab_progress_indeterminate = 24;
+			
+			// aapt resource value: 25
+			public const int FloatingActionButton_fab_progress_max = 25;
+			
+			// aapt resource value: 27
+			public const int FloatingActionButton_fab_progress_showBackground = 27;
+			
+			// aapt resource value: 13
+			public const int FloatingActionButton_fab_shadowColor = 13;
+			
+			// aapt resource value: 14
+			public const int FloatingActionButton_fab_shadowRadius = 14;
+			
+			// aapt resource value: 15
+			public const int FloatingActionButton_fab_shadowXOffset = 15;
+			
+			// aapt resource value: 16
+			public const int FloatingActionButton_fab_shadowYOffset = 16;
+			
+			// aapt resource value: 18
+			public const int FloatingActionButton_fab_showAnimation = 18;
+			
+			// aapt resource value: 12
+			public const int FloatingActionButton_fab_showShadow = 12;
+			
+			// aapt resource value: 17
+			public const int FloatingActionButton_fab_size = 17;
+			
 			// aapt resource value: 2
 			public const int FloatingActionButton_pressedTranslationZ = 2;
 			
@@ -4543,6 +4839,165 @@ namespace TechTalk.Droid
 			
 			// aapt resource value: 4
 			public const int FloatingActionButton_useCompatPadding = 4;
+			
+			public static int[] FloatingActionMenu = new int[]
+			{
+					2130772270,
+					2130772271,
+					2130772272,
+					2130772273,
+					2130772274,
+					2130772275,
+					2130772276,
+					2130772277,
+					2130772278,
+					2130772279,
+					2130772280,
+					2130772281,
+					2130772282,
+					2130772283,
+					2130772284,
+					2130772285,
+					2130772286,
+					2130772287,
+					2130772288,
+					2130772289,
+					2130772290,
+					2130772291,
+					2130772292,
+					2130772293,
+					2130772294,
+					2130772295,
+					2130772296,
+					2130772297,
+					2130772298,
+					2130772299,
+					2130772300,
+					2130772301,
+					2130772302,
+					2130772303,
+					2130772304,
+					2130772305,
+					2130772306,
+					2130772307,
+					2130772308};
+			
+			// aapt resource value: 19
+			public const int FloatingActionMenu_menu_animationDelayPerItem = 19;
+			
+			// aapt resource value: 35
+			public const int FloatingActionMenu_menu_backgroundColor = 35;
+			
+			// aapt resource value: 1
+			public const int FloatingActionMenu_menu_buttonSpacing = 1;
+			
+			// aapt resource value: 20
+			public const int FloatingActionMenu_menu_buttonToggleAnimation = 20;
+			
+			// aapt resource value: 31
+			public const int FloatingActionMenu_menu_colorNormal = 31;
+			
+			// aapt resource value: 32
+			public const int FloatingActionMenu_menu_colorPressed = 32;
+			
+			// aapt resource value: 33
+			public const int FloatingActionMenu_menu_colorRipple = 33;
+			
+			// aapt resource value: 38
+			public const int FloatingActionMenu_menu_fab_hide_animation = 38;
+			
+			// aapt resource value: 36
+			public const int FloatingActionMenu_menu_fab_label = 36;
+			
+			// aapt resource value: 37
+			public const int FloatingActionMenu_menu_fab_show_animation = 37;
+			
+			// aapt resource value: 24
+			public const int FloatingActionMenu_menu_fab_size = 24;
+			
+			// aapt resource value: 18
+			public const int FloatingActionMenu_menu_icon = 18;
+			
+			// aapt resource value: 14
+			public const int FloatingActionMenu_menu_labels_colorNormal = 14;
+			
+			// aapt resource value: 15
+			public const int FloatingActionMenu_menu_labels_colorPressed = 15;
+			
+			// aapt resource value: 16
+			public const int FloatingActionMenu_menu_labels_colorRipple = 16;
+			
+			// aapt resource value: 12
+			public const int FloatingActionMenu_menu_labels_cornerRadius = 12;
+			
+			// aapt resource value: 26
+			public const int FloatingActionMenu_menu_labels_customFont = 26;
+			
+			// aapt resource value: 22
+			public const int FloatingActionMenu_menu_labels_ellipsize = 22;
+			
+			// aapt resource value: 4
+			public const int FloatingActionMenu_menu_labels_hideAnimation = 4;
+			
+			// aapt resource value: 2
+			public const int FloatingActionMenu_menu_labels_margin = 2;
+			
+			// aapt resource value: 23
+			public const int FloatingActionMenu_menu_labels_maxLines = 23;
+			
+			// aapt resource value: 9
+			public const int FloatingActionMenu_menu_labels_padding = 9;
+			
+			// aapt resource value: 8
+			public const int FloatingActionMenu_menu_labels_paddingBottom = 8;
+			
+			// aapt resource value: 6
+			public const int FloatingActionMenu_menu_labels_paddingLeft = 6;
+			
+			// aapt resource value: 7
+			public const int FloatingActionMenu_menu_labels_paddingRight = 7;
+			
+			// aapt resource value: 5
+			public const int FloatingActionMenu_menu_labels_paddingTop = 5;
+			
+			// aapt resource value: 17
+			public const int FloatingActionMenu_menu_labels_position = 17;
+			
+			// aapt resource value: 3
+			public const int FloatingActionMenu_menu_labels_showAnimation = 3;
+			
+			// aapt resource value: 13
+			public const int FloatingActionMenu_menu_labels_showShadow = 13;
+			
+			// aapt resource value: 21
+			public const int FloatingActionMenu_menu_labels_singleLine = 21;
+			
+			// aapt resource value: 25
+			public const int FloatingActionMenu_menu_labels_style = 25;
+			
+			// aapt resource value: 10
+			public const int FloatingActionMenu_menu_labels_textColor = 10;
+			
+			// aapt resource value: 11
+			public const int FloatingActionMenu_menu_labels_textSize = 11;
+			
+			// aapt resource value: 34
+			public const int FloatingActionMenu_menu_openDirection = 34;
+			
+			// aapt resource value: 27
+			public const int FloatingActionMenu_menu_shadowColor = 27;
+			
+			// aapt resource value: 28
+			public const int FloatingActionMenu_menu_shadowRadius = 28;
+			
+			// aapt resource value: 29
+			public const int FloatingActionMenu_menu_shadowXOffset = 29;
+			
+			// aapt resource value: 30
+			public const int FloatingActionMenu_menu_shadowYOffset = 30;
+			
+			// aapt resource value: 0
+			public const int FloatingActionMenu_menu_showShadow = 0;
 			
 			public static int[] ForegroundLinearLayout = new int[]
 			{

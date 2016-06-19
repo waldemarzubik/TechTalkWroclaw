@@ -120,6 +120,11 @@
     <Compile Include="ClientSpecific\ParamsHolder.cs" />
     <Compile Include="Controls\CacheImageView.cs" />
     <Compile Include="Views\SplashView.cs" />
+    <Compile Include="EventArgs\ServiceEventArgs.cs" />
+    <Compile Include="Interfaces\IBoundedServiceConnection.cs" />
+    <Compile Include="ClientSpecific\BoundedServiceConnection.cs" />
+    <Compile Include="ClientSpecific\ServiceConnectionBinder.cs" />
+    <Compile Include="Interfaces\IServiceConnectionBinder.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\AboutResources.txt" />
@@ -168,6 +173,11 @@
   <ItemGroup>
     <Folder Include="Controls\" />
     <Folder Include="Views\Fragments\" />
+    <Folder Include="ProxyInterfaces\" />
+    <Folder Include="Services\" />
+    <Folder Include="Proxy\" />
+    <Folder Include="ProxyBinders\" />
+    <Folder Include="EventArgs\" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
   <Import Project="..\packages\Xamarin.Android.Support.Vector.Drawable.23.3.0\build\Xamarin.Android.Support.Vector.Drawable.targets" Condition="Exists('..\packages\Xamarin.Android.Support.Vector.Drawable.23.3.0\build\Xamarin.Android.Support.Vector.Drawable.targets')" />

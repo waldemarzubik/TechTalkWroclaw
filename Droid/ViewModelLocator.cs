@@ -1,5 +1,6 @@
 ﻿using System;
 using TechTalk.Interfaces;
+using GalaSoft.MvvmLight.Ioc;
 
 namespace TechTalk.Droid
 {
@@ -19,6 +20,11 @@ namespace TechTalk.Droid
             {
                 throw new NotImplementedException();
             }
+        }
+
+        public ViewModelLocator()
+        {
+
         }
     }
 }
