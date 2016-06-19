@@ -21,7 +21,7 @@ namespace TechTalk
 
             //REGISTERING SERVICES
             SimpleIoc.Default.Register<INavigation>(NavigationServiceFunc);
-            SimpleIoc.Default.Register<IGalleryService>(GalleryServiceFunc);
+            //SimpleIoc.Default.Register<IGalleryService>(GalleryServiceFunc);
 
             //REGISTERING VIEW MODEL
             SimpleIoc.Default.Register<IMainMenuViewModel, MainMenuViewModel>();

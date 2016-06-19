@@ -1,6 +1,8 @@
 ﻿using System;
 using TechTalk.Interfaces;
 using GalaSoft.MvvmLight.Ioc;
+using TechTalk.Droid.Interfaces;
+using TechTalk.Droid.ClientSpecific;
 
 namespace TechTalk.Droid
 {
@@ -10,7 +12,7 @@ namespace TechTalk.Droid
         {
             get
             {
-                throw new NotImplementedException();
+                return null;
             }
         }
 
@@ -18,13 +20,14 @@ namespace TechTalk.Droid
         {
             get
             {
-                throw new NotImplementedException();
+                return () => new NavigationService();
             }
         }
 
         public ViewModelLocator()
         {
-
+            SimpleIoc.Default.Register<IActivityLifeTimeMonitor, ActivityLifeTimeMonitor>();
+            SimpleIoc.Default.Register<ITransitionService, TransitionService>();
         }
     }
 }
