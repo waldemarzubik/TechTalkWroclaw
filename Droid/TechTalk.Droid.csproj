@@ -125,6 +125,9 @@
     <Compile Include="ClientSpecific\BoundedServiceConnection.cs" />
     <Compile Include="ClientSpecific\ServiceConnectionBinder.cs" />
     <Compile Include="Interfaces\IServiceConnectionBinder.cs" />
+    <Compile Include="Views\MainView.cs" />
+    <Compile Include="Views\Fragments\MainMenuFragment.cs" />
+    <Compile Include="Views\PictureView.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\AboutResources.txt" />
@@ -158,6 +161,9 @@
     <AndroidResource Include="Resources\drawable\ic_grayscale.xml" />
     <AndroidResource Include="Resources\drawable\ic_blur.xml" />
     <AndroidResource Include="Resources\drawable\ic_rotate.xml" />
+    <AndroidResource Include="Resources\layout\MainView.axml" />
+    <AndroidResource Include="Resources\layout\MainMenuView.axml" />
+    <AndroidResource Include="Resources\layout\PictureView.axml" />
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>
