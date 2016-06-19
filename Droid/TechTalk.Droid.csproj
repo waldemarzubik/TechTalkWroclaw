@@ -129,6 +129,7 @@
     <Compile Include="Views\Fragments\MainMenuFragment.cs" />
     <Compile Include="Views\PictureView.cs" />
     <Compile Include="ClientSpecific\NavigationService.cs" />
+    <Compile Include="Views\Fragments\GalleryFragment.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\AboutResources.txt" />
@@ -166,6 +167,8 @@
     <AndroidResource Include="Resources\layout\MainMenuView.axml" />
     <AndroidResource Include="Resources\layout\PictureView.axml" />
     <AndroidResource Include="Resources\layout\MenuHeader.axml" />
+    <AndroidResource Include="Resources\layout\GalleryView.axml" />
+    <AndroidResource Include="Resources\layout\Item_Picture.axml" />
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>
