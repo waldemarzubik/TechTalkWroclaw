@@ -173,7 +173,7 @@
   </ItemGroup>
   <ItemGroup>
     <InterfaceDefinition Include="Storyboards\MainView.storyboard" />
-    <InterfaceDefinition Include="Resources\LaunchScreen.storyboard" />
+    <InterfaceDefinition Include="Storyboards\LaunchScreen.storyboard" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Info.plist" />
