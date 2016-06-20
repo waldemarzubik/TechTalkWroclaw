@@ -18,6 +18,8 @@ namespace TechTalk.Droid
 
         private IActivityLifeTimeMonitor ActivityLifeTimeMonitor { get; set; }
 
+        private IServiceConnectionBinder Binder { get; set; }
+
         protected T ViewModel { get; private set; }
 
         protected ActivityBase(int layoutResId, int toolbarResId = 0)
@@ -29,6 +31,7 @@ namespace TechTalk.Droid
         protected override void OnCreate(Bundle savedInstanceState)
         {
             ActivityLifeTimeMonitor = SimpleIoc.Default.GetInstanceWithoutCaching<IActivityLifeTimeMonitor>();
+            Binder = SimpleIoc.Default.GetInstance<IServiceConnectionBinder>();
             ViewModel = ServiceLocator.Current.GetInstance<T>();
             base.OnCreate(savedInstanceState);
             ActivityLifeTimeMonitor.Activity = this;
@@ -46,6 +49,7 @@ namespace TechTalk.Droid
         protected override void OnStart()
         {
             base.OnStart();
+            Binder.Bind(this);
             ActivityLifeTimeMonitor.Activity = this;
             ViewModel.OnNavigatedTo();
         }
@@ -53,6 +57,7 @@ namespace TechTalk.Droid
         protected override void OnStop()
         {
             ViewModel.OnNavigatingFrom();
+            Binder.Undbind(this);
             base.OnStop();
         }
 
