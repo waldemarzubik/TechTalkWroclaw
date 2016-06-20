@@ -30,11 +30,7 @@ namespace TechTalk.Droid.Views
             Task.Run(async () =>
             {
                 await Task.Delay(1500);
-                using (var intent = new Intent(this, typeof(MainView)))
-                {
-                    StartActivity(intent);
-                }
-                //NavigationService.NavigateTo<IMainViewModel>();
+                NavigationService.NavigateTo<IMainViewModel>();
             });
         }
 

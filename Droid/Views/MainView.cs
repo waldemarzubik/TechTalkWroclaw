@@ -26,14 +26,7 @@ namespace TechTalk.Droid
         {
             base.OnCreate(savedInstanceState);
 
-            var fragmentManager = SupportFragmentManager;
-            var fragmentTransaction = fragmentManager.BeginTransaction();
-            fragmentTransaction.Replace(Resource.Id.navigationDrawer, System.Activator.CreateInstance<MainMenuFragment>());
-            fragmentTransaction.CommitAllowingStateLoss();
-
-            fragmentTransaction = fragmentManager.BeginTransaction();
-            fragmentTransaction.Replace(Resource.Id.drawerContent, System.Activator.CreateInstance<GalleryFragment>());
-            fragmentTransaction.CommitAllowingStateLoss();
+            ViewModel.NavigationService.NavigateTo<IMainMenuViewModel>();
         }
 
         protected override void OnCreateToolbar()

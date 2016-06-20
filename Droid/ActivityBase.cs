@@ -8,6 +8,7 @@ using TechTalk.Droid.Extensions;
 using TechTalk.Droid.Interfaces;
 using TechTalk.ViewModels;
 using GalaSoft.MvvmLight.Ioc;
+using TechTalk.Interfaces;
 
 namespace TechTalk.Droid
 {
