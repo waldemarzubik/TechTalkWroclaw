@@ -29,7 +29,7 @@ namespace TechTalk.iOS
 			var icon = GetCharForDescription<IconsEnum>(label.Text);
 			label.Text = icon + SPACE + label.Text;
 			label.Font = UIFont.FromName("FontAwesome", 20f);
-
+			label.TextColor = EpamStyles.PrimaryColor4;
 		}
 
 		private static char GetCharForDescription<T>(string textDesc)

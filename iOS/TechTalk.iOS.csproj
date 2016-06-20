@@ -1,5 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
-<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+﻿<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">iPhoneSimulator</Platform>
@@ -163,10 +162,6 @@
     <ImageAsset Include="Resources\iTunesArtwork%402x.png">
       <InProject>false</InProject>
     </ImageAsset>
-    <ImageAsset Include="Assets.xcassets\LaunchImage.launchimage\Contents.json" />
-    <ImageAsset Include="Assets.xcassets\LaunchImage.launchimage\appletv.png" />
-    <ImageAsset Include="Assets.xcassets\LaunchImage.launchimage\Ratina55.png" />
-    <ImageAsset Include="Assets.xcassets\LaunchImage.launchimage\Ratina47.png" />
     <ImageAsset Include="Assets.xcassets\Image.imageset\Contents.json" />
     <ImageAsset Include="Assets.xcassets\Image.imageset\EPAM_LOGO_Full_Color_RGB.png" />
   </ItemGroup>
@@ -178,6 +173,7 @@
   </ItemGroup>
   <ItemGroup>
     <InterfaceDefinition Include="Storyboards\MainView.storyboard" />
+    <InterfaceDefinition Include="Resources\LaunchScreen.storyboard" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Info.plist" />
@@ -191,6 +187,7 @@
     <Compile Include="Services\GalleryService.cs" />
     <Compile Include="Services\NavigationService.cs" />
     <Compile Include="SlideOutMenuViewController.cs" />
+    <Compile Include="PictureViewController.cs" />
     <Compile Include="SlideOutMenuViewController.designer.cs">
       <DependentUpon>SlideOutMenuViewController.cs</DependentUpon>
     </Compile>
@@ -203,7 +200,6 @@
     <Compile Include="PictureCollectionViewController.designer.cs">
       <DependentUpon>PictureCollectionViewController.cs</DependentUpon>
     </Compile>
-    <Compile Include="PictureViewController.cs" />
     <Compile Include="PictureViewController.designer.cs">
       <DependentUpon>PictureViewController.cs</DependentUpon>
     </Compile>

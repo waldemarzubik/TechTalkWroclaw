@@ -28,6 +28,14 @@ namespace TechTalk.iOS
 				return UIColor.FromRGB(70, 69, 71);
 			}
 		}
+
+		public static UIColor PrimaryColor4
+		{
+			get
+			{
+				return UIColor.FromRGB(255, 255, 255);
+			}
+		}
 	}
 }
 
