@@ -29,7 +29,7 @@ namespace TechTalk.iOS
 								Console.WriteLine("Could not enumerate albums: " + e.LocalizedDescription); }
 			                 	);
 			
-			//whooo hoo
+
 			return taskCompletionSource.Task;
 		}
 

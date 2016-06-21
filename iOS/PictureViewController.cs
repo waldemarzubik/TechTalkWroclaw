@@ -20,7 +20,9 @@ namespace TechTalk.iOS
 
 		public override void ViewDidLoad()
 		{
+			//Hide it, because I sad so. 
 			ImageView.Alpha = 0;
+
 			var picture = Params as Picture;
 
 			_assetLib.AssetForUrl(
@@ -28,21 +30,25 @@ namespace TechTalk.iOS
 					delegate (ALAsset asset)
 					{
 						UIImage image = new UIImage(asset.DefaultRepresentation.GetFullScreenImage());
-
 						ImageView.Image = image;
-
-
 					},
 					(NSError e) =>
 					{
 						Console.WriteLine("Where is my ass..et bro?: " + e.LocalizedDescription);
-					}
-					);
+					});
 
 			base.ViewDidLoad();
 
+			/// <summary>
+			/// Oh, you are going to show it back, right? 
+			/// </summary>
 			Animate();
 
+
+
+			/// <summary>
+			/// Let your fingers work. Use them all. 
+			/// </summary>
 			ScrollImageView.MaximumZoomScale = 3f;
 			ScrollImageView.MinimumZoomScale = 1f;
 			ScrollImageView.ViewForZoomingInScrollView += (UIScrollView sv) => { return ImageView; };

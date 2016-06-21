@@ -32,26 +32,11 @@ namespace TechTalk.iOS
 			CollectionView.RegisterClassForCell(typeof(PictureViewCell), PictureViewCell.Key);
 			CollectionView.AllowsSelection = true;
 
-		
-
-
-			UIPinchGestureRecognizer pinch = new UIPinchGestureRecognizer(handlePinchGesture);
-			CollectionView.AddGestureRecognizer(pinch);
+	
 		}
 
 
-		public void handlePinchGesture(UIPinchGestureRecognizer gesture)
-		{
-			if (gesture.State == UIGestureRecognizerState.Began)
-			{
-				scaleStart = CurrentScale;
-			}
-			else if (gesture.State == UIGestureRecognizerState.Changed)
-			{
-				CurrentScale = scaleStart * gesture.Scale;
-				CollectionView.CollectionViewLayout.InvalidateLayout();
-			}
-		}
+
 
 		void ViewModel_PropertyChanged(object sender, PropertyChangedEventArgs e)
 		{
