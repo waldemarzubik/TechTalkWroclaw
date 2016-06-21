@@ -2140,6 +2140,9 @@ namespace TechTalk.Droid
 			// aapt resource value: 0x7f0a0034
 			public const int beginning = 2131361844;
 			
+			// aapt resource value: 0x7f0a008a
+			public const int blurButton = 2131361930;
+			
 			// aapt resource value: 0x7f0a0014
 			public const int bottom = 2131361812;
 			
@@ -2254,6 +2257,9 @@ namespace TechTalk.Droid
 			// aapt resource value: 0x7f0a0024
 			public const int @fixed = 2131361828;
 			
+			// aapt resource value: 0x7f0a008b
+			public const int grayscaleButton = 2131361931;
+			
 			// aapt resource value: 0x7f0a0006
 			public const int home = 2131361798;
 			
@@ -2299,6 +2305,9 @@ namespace TechTalk.Droid
 			// aapt resource value: 0x7f0a007e
 			public const int media_actions = 2131361918;
 			
+			// aapt resource value: 0x7f0a0089
+			public const int menu = 2131361929;
+			
 			// aapt resource value: 0x7f0a0035
 			public const int middle = 2131361845;
 			
@@ -2332,6 +2341,9 @@ namespace TechTalk.Droid
 			// aapt resource value: 0x7f0a0049
 			public const int parentPanel = 2131361865;
 			
+			// aapt resource value: 0x7f0a0088
+			public const int picture = 2131361928;
+			
 			// aapt resource value: 0x7f0a0013
 			public const int pin = 2131361811;
 			
@@ -2346,6 +2358,9 @@ namespace TechTalk.Droid
 			
 			// aapt resource value: 0x7f0a001b
 			public const int right = 2131361819;
+			
+			// aapt resource value: 0x7f0a008c
+			public const int rotateButton = 2131361932;
 			
 			// aapt resource value: 0x7f0a0030
 			public const int screen = 2131361840;
@@ -3279,6 +3294,9 @@ namespace TechTalk.Droid
 			// aapt resource value: 0x7f060002
 			public const int Base_Widget_Design_TabLayout = 2131099650;
 			
+			// aapt resource value: 0x7f060157
+			public const int GreenFabButton = 2131099991;
+			
 			// aapt resource value: 0x7f060030
 			public const int Platform_AppCompat = 2131099696;
 			
@@ -3609,11 +3627,11 @@ namespace TechTalk.Droid
 			// aapt resource value: 0x7f06000f
 			public const int Theme_Design_NoActionBar = 2131099663;
 			
-			// aapt resource value: 0x7f060157
-			public const int Theme_Epam_TechTalk = 2131099991;
-			
 			// aapt resource value: 0x7f060158
-			public const int Theme_Epam_TechTalk_Splash = 2131099992;
+			public const int Theme_Epam_TechTalk = 2131099992;
+			
+			// aapt resource value: 0x7f060159
+			public const int Theme_Epam_TechTalk_Splash = 2131099993;
 			
 			// aapt resource value: 0x7f06010c
 			public const int ThemeOverlay_AppCompat = 2131099916;
